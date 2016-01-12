@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "bezut_Source", "bezut_Source\", "{0A46EDB4-110D-4826-ACD4-FE04AAA4F309}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/bezut_Source"
+		Debug.AspNetCompiler.PhysicalPath = "bezut_Source\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\bezut_Source\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/bezut_Source"
+		Release.AspNetCompiler.PhysicalPath = "bezut_Source\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\bezut_Source\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "12021"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A46EDB4-110D-4826-ACD4-FE04AAA4F309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A46EDB4-110D-4826-ACD4-FE04AAA4F309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

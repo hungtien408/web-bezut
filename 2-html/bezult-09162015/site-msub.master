@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/site-sub.master" AutoEventWireup="true" CodeFile="site-msub.master.cs" Inherits="site_msub" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphBanner" Runat="Server">
+    <asp:ContentPlaceHolder id="cphBanner" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphAside" Runat="Server">
+        <asp:ContentPlaceHolder id="cphAsideTop" runat="server">
+        </asp:ContentPlaceHolder>
+        <div class="adv">
+            <a href="#"><img src="assets/images/images-1.jpg" alt=""/></a>
+        </div>
+        <div class="adv">
+            <a href="#"><img src="assets/images/images-2.jpg" alt=""/></a>
+        </div>
+        <div class="wrap-video">
+            <a href="#" class="videob">
+                <img src="assets/images/video.jpg" alt=""/>
+            </a>
+            <div class="video-content">
+                <h3 class="video-name"><a href="#">SIRO HO BEZUT - Babyface Entertainment</a></h3>
+                <div class="description">Post by admin   |   20 lượt xem</div>
+            </div>
+        </div>
+        <ul class="list-video">
+            <li>
+                <a href="#" class="video-box">
+                    <span class="video-img">
+                        <img src="assets/images/video-img.jpg" alt=""/>
+                        <span class="video-time">00:00</span>
+                        <span class="show">đã xem</span>
+                    </span>
+                    <span class="video-content">
+                        <span class="video-name">Quảng cáo viên ngậm ho Bezut</span>
+                        <span class="description">
+                            Post by admin<br />
+                            20 lượt xem
+                        </span>
+                    </span>
+                </a>
+                <div class="whidden"><div id="video-1" class="info-vido" data-video="https://youtu.be/xtE8i5sutdw"></div></div>
+            </li>
+            <li>
+                <a href="#" class="video-box">
+                    <span class="video-img">
+                        <img src="assets/images/video-img.jpg" alt=""/>
+                        <span class="video-time">00:00</span>
+                        <span class="show">đã xem</span>
+                    </span>
+                    <span class="video-content">
+                        <span class="video-name">Quảng cáo viên ngậm ho Bezut</span>
+                        <span class="description">
+                            Post by admin<br />
+                            20 lượt xem
+                        </span>
+                    </span>
+                </a>
+                <div class="whidden"><div id="video-2" class="info-vido" data-video="https://youtu.be/wDJ5nol2JKs"></div></div>
+            </li>
+            <li>
+                <a href="#" class="video-box">
+                    <span class="video-img">
+                        <img src="assets/images/video-img.jpg" alt=""/>
+                        <span class="video-time">00:00</span>
+                        <span class="show">đã xem</span>
+                    </span>
+                    <span class="video-content">
+                        <span class="video-name">Quảng cáo viên ngậm ho Bezut</span>
+                        <span class="description">
+                            Post by admin<br />
+                            20 lượt xem
+                        </span>
+                    </span>
+                </a>
+                <div  class="whidden"><div id="video-3" class="info-vido" data-video="https://youtu.be/wDJ5nol2JKs"></div></div>
+            </li>
+        </ul>
+        <div class="wrap-question">
+            <div class="question-out">
+                <div class="question-in">
+                    <div class="question-box">
+                        <h2>Gửi câu hỏi </h2>
+                        <div class="description">Các câu hỏi của bạn đọc sẽ được giải đáp bởi đội ngũ chuyên gia y dược giàu kinh nghiệm</div>
+                    </div>
+                    <div class="form-question">
+                        <div class="question-input">
+                            <asp:TextBox ID="TextBox1" CssClass="question-text corner" runat="server" Text="Họ tên"></asp:TextBox>
+                        </div>
+                        <div class="question-input">
+                            <asp:TextBox ID="TextBox2" CssClass="question-text corner" runat="server" Text="Email"></asp:TextBox>
+                        </div>
+                        <div class="question-input">
+                            <asp:TextBox ID="TextBox3" CssClass="question-area corner" runat="server" Text="Nội dung câu hỏi" TextMode="MultiLine"></asp:TextBox>
+                        </div>
+                        <div class="question-input">
+                            <asp:Button ID="Button1" CssClass="question-btn" runat="server" Text="Gửi câu hỏi" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder id="cphAsideBottom" runat="server">
+        </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="cphPopup" Runat="Server">
+    <asp:ContentPlaceHolder ID="cphPopup" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+

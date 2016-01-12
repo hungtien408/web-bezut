@@ -1,0 +1,159 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/en/site-sub.master" AutoEventWireup="true"
+    CodeFile="site-phanphoi.master.cs" Inherits="site_phanphoi" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphBanner" runat="Server">
+    <asp:ContentPlaceHolder ID="cphBanner" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphAside" runat="Server">
+    <asp:ContentPlaceHolder ID="cphAsideTop" runat="server">
+    </asp:ContentPlaceHolder>
+    <div class="row">
+        <div class="col-md-12 col-xs-6">
+            <div class="adv">
+                <a href="he-thong-phan-phoi.aspx">
+                    <img src="../assets/images/images-1.jpg" alt="" /></a>
+            </div>
+        </div>
+        <div class="col-md-12 col-xs-6">
+    <div class="wrap-question">
+        <div class="question-out">
+            <div class="question-in">
+                <div class="question-box">
+                    <h2>
+                        Send question
+                    </h2>
+                    <div class="description">
+                        Reading your questions will be answered by our team of experienced medical professionals</div>
+                </div>
+                <div class="form-question">
+                    <div class="question-input">
+                        <asp:TextBox ID="txtTitle" CssClass="question-text corner" runat="server"></asp:TextBox>
+                        <asp:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender1" runat="server" Enabled="True"
+                            WatermarkText="Title" TargetControlID="txtTitle">
+                        </asp:TextBoxWatermarkExtender>
+                        <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator4" runat="server"
+                            Display="Dynamic" ValidationGroup="SendAnswer" ControlToValidate="txtTitle" ErrorMessage="Information required!"
+                            ForeColor="Red"></asp:RequiredFieldValidator>
+                    </div>
+                    <div class="question-input">
+                        <asp:TextBox ID="txtHoTen" CssClass="question-text corner" runat="server"></asp:TextBox>
+                        <asp:TextBoxWatermarkExtender ID="txtHoTen_WatermarkExtender" runat="server" Enabled="True"
+                            WatermarkText="Fullname" TargetControlID="txtHoTen">
+                        </asp:TextBoxWatermarkExtender>
+                        <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator1" runat="server"
+                            Display="Dynamic" ValidationGroup="SendAnswer" ControlToValidate="txtHoTen" ErrorMessage="Information required!"
+                            ForeColor="Red"></asp:RequiredFieldValidator>
+                    </div>
+                    <div class="question-input">
+                        <asp:TextBox ID="txtEmail" CssClass="question-text corner" runat="server"></asp:TextBox>
+                        <asp:TextBoxWatermarkExtender ID="txtEmail_WatermarkExtender" runat="server" Enabled="True"
+                                WatermarkText="Email" TargetControlID="txtEmail">
+                            </asp:TextBoxWatermarkExtender>
+                            <asp:RegularExpressionValidator CssClass="lb-error" ID="RegularExpressionValidator1"
+                                runat="server" ValidationGroup="SendEmail" ControlToValidate="txtEmail" ErrorMessage="Email is error!"
+                                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"
+                                ForeColor="Red"></asp:RegularExpressionValidator>
+                            <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator2" runat="server"
+                                ValidationGroup="SendAnswer" ControlToValidate="txtEmail" ErrorMessage="Information required!"
+                                Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </div>
+                    <div class="question-input">
+                        <asp:TextBox ID="txtNoiDung" CssClass="question-area corner" runat="server"
+                            TextMode="MultiLine"></asp:TextBox>
+                        <asp:TextBoxWatermarkExtender ID="txtNoiDung_WatermarkExtender" runat="server" Enabled="True"
+                                WatermarkText="Question content" TargetControlID="txtNoiDung">
+                            </asp:TextBoxWatermarkExtender>
+                            <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator3" runat="server"
+                                ValidationGroup="SendAnswer" Display="Dynamic" ControlToValidate="txtNoiDung"
+                                ErrorMessage="Information required!" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </div>
+                    <div class="question-input">
+                        <asp:Button ID="btnSendAnswer" CssClass="question-btn" runat="server" 
+                            Text="Send question"  ValidationGroup="SendAnswer" onclick="btnSendAnswer_Click"/>
+                    </div>
+                    <div class="question-input">
+                        <asp:Label runat="server" ID="lblMessage" ForeColor="red"></asp:Label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="cphAsideBottom" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <asp:ContentPlaceHolder ID="cphTitle" runat="server">
+    </asp:ContentPlaceHolder>
+    <div class="form-search">
+        <div class="row">
+            <div class="col-sm-3 col-xs-12 element-item">
+                <label class="text-right">
+                    Search</label></div>
+            <div class="col-sm-6 col-xs-10">
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <div class="row">
+                    <div class="col-xs-6 element-item">
+                        <div class="select-nobox">
+                            <asp:DropDownList ID="dropListThanhPho" CssClass="selectb" runat="server" DataSourceID="odsThanhPho"
+                                DataTextField="ProvinceNameEn" DataValueField="ProvinceID" AutoPostBack="True">
+                                <asp:ListItem>Tỉnh/Thành Phố</asp:ListItem>
+                            </asp:DropDownList>
+                            <asp:ObjectDataSource ID="odsThanhPho" runat="server" SelectMethod="ProvinceSelectAll"
+                                TypeName="TLLib.Province">
+                                <SelectParameters>
+                                    <asp:Parameter Name="ProvinceID" Type="String" />
+                                    <asp:Parameter Name="ProvinceName" Type="String" />
+                                    <asp:Parameter Name="ShortName" Type="String" />
+                                    <asp:Parameter Name="CountryID" Type="String" />
+                                    <asp:Parameter Name="Priority" Type="String" />
+                                    <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                                    <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                                </SelectParameters>
+                            </asp:ObjectDataSource>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 element-item">
+                        <div class="select-nobox">
+                            <asp:DropDownList ID="dropListQuan" CssClass="selectb" runat="server" DataSourceID="odsQuan"
+                                DataTextField="DistrictNameEn" DataValueField="DistrictID" AutoPostBack="True">
+                                <asp:ListItem>Quận/Huyện</asp:ListItem>
+                            </asp:DropDownList>
+                            <asp:ObjectDataSource ID="odsQuan" runat="server" SelectMethod="DistrictSelectAll"
+                                TypeName="TLLib.District">
+                                <SelectParameters>
+                                    <asp:Parameter Name="DistrictName" Type="String" />
+                                    <asp:ControlParameter ControlID="dropListThanhPho" Name="ProvinceIDs" PropertyName="SelectedValue"
+                                        Type="String" />
+                                    <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                                    <asp:Parameter Name="Priority" Type="String" />
+                                    <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                                </SelectParameters>
+                            </asp:ObjectDataSource>
+                        </div>
+                    </div>
+
+                    </div>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+                </div>
+            <div class="col-sm-3 col-xs-2 element-item">
+                <asp:Button ID="btnSearchPhanPhoi" CssClass="search-btn" runat="server" Text="" 
+                    ValidationGroup="TimKiemPhanPhoi" onclick="btnSearchPhanPhoi_Click" />
+            </div>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="cphPopup" runat="Server">
+    <asp:ContentPlaceHolder ID="cphPopup" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

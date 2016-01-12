@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/site-sub.master" AutoEventWireup="true" CodeFile="site-news.master.cs" Inherits="site_news" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphBanner" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphAside" Runat="Server">
+        <asp:ContentPlaceHolder id="cphAsideTop" runat="server">
+        </asp:ContentPlaceHolder>
+        <div class="news-box">
+            <h2 class="title-ab text-uppercase">Bài viết nổi bật</h2>
+            <a href="#" class="news-img"><img src="assets/images/dieutriho-img-1.jpg" alt=""/></a>
+            <h3 class="news-name"><a href="#">5 cách chữa ho hiệu quả cho trẻ bằng thảo dược</a></h3>
+        </div>
+        <ul class="list-news">
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+        </ul>
+        <div class="wrap-video">
+            <a href="#" class="videob">
+                <img src="assets/images/video.jpg" alt=""/>
+            </a>
+            <div class="video-content">
+                <h3 class="video-name"><a href="#">SIRO HO BEZUT - Babyface Entertainment</a></h3>
+                <div class="description">Post by admin   |   20 lượt xem</div>
+            </div>
+        </div>
+        <ul class="list-video">
+            <li>
+                <a href="#" class="video-box">
+                    <span class="video-img">
+                        <img src="assets/images/video-img.jpg" alt=""/>
+                        <span class="video-time">00:00</span>
+                        <span class="show">đã xem</span>
+                    </span>
+                    <span class="video-content">
+                        <span class="video-name">Quảng cáo viên ngậm ho Bezut</span>
+                        <span class="description">
+                            Post by admin<br />
+                            20 lượt xem
+                        </span>
+                    </span>
+                </a>
+                <div class="whidden"><div id="video-1" class="info-vido" data-video="https://youtu.be/xtE8i5sutdw"></div></div>
+            </li>
+            <li>
+                <a href="#" class="video-box">
+                    <span class="video-img">
+                        <img src="assets/images/video-img.jpg" alt=""/>
+                        <span class="video-time">00:00</span>
+                        <span class="show">đã xem</span>
+                    </span>
+                    <span class="video-content">
+                        <span class="video-name">Quảng cáo viên ngậm ho Bezut</span>
+                        <span class="description">
+                            Post by admin<br />
+                            20 lượt xem
+                        </span>
+                    </span>
+                </a>
+                <div class="whidden"><div id="video-2" class="info-vido" data-video="https://youtu.be/wDJ5nol2JKs"></div></div>
+            </li>
+            <li>
+                <a href="#" class="video-box">
+                    <span class="video-img">
+                        <img src="assets/images/video-img.jpg" alt=""/>
+                        <span class="video-time">00:00</span>
+                        <span class="show">đã xem</span>
+                    </span>
+                    <span class="video-content">
+                        <span class="video-name">Quảng cáo viên ngậm ho Bezut</span>
+                        <span class="description">
+                            Post by admin<br />
+                            20 lượt xem
+                        </span>
+                    </span>
+                </a>
+                <div  class="whidden"><div id="video-3" class="info-vido" data-video="https://youtu.be/wDJ5nol2JKs"></div></div>
+            </li>
+        </ul>
+        <div class="news-box news-blue">
+            <h2 class="title-ab text-uppercase">kiến thức bệnh học</h2>
+            <a href="#" class="news-img"><img src="assets/images/dieutriho-img-1.jpg" alt=""/></a>
+            <h3 class="news-name"><a href="#">5 cách chữa ho hiệu quả cho trẻ bằng thảo dược</a></h3>
+        </div>
+        <ul class="list-news">
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+        </ul>
+        <div class="adv">
+            <a href="#"><img src="assets/images/images-1.jpg" alt=""/></a>
+        </div>
+        <asp:ContentPlaceHolder id="cphAsideBottom" runat="server">
+        </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="cphPopup" Runat="Server">
+    <asp:ContentPlaceHolder ID="cphPopup" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+

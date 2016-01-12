@@ -1,0 +1,323 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/en/site-sub.master" AutoEventWireup="true"
+    CodeFile="site-news.master.cs" Inherits="site_news" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphBanner" runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphAside" runat="Server">
+    <asp:ContentPlaceHolder ID="cphAsideTop" runat="server">
+    </asp:ContentPlaceHolder>
+    <div class="row">
+        <div class="col-md-12 col-xs-6">
+    <%--<div class="news-box">
+            <h2 class="title-ab text-uppercase">Bài viết nổi bật</h2>
+            <a href="#" class="news-img"><img src="assets/images/dieutriho-img-1.jpg" alt=""/></a>
+            <h3 class="news-name"><a href="#">5 cách chữa ho hiệu quả cho trẻ bằng thảo dược</a></h3>
+        </div>
+        <ul class="list-news">
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+            <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+        </ul>--%>
+    <asp:ListView ID="lstDieuTriHoNoiBat" runat="server" DataSourceID="odsDieuTriHoNoiBat"
+        EnableModelValidation="True">
+        <ItemTemplate>
+            <div class="news-box">
+                <h2 class="title-ab text-uppercase">
+                    Featured article</h2>
+                <a href='<%# progressTitle(Eval("ArticleTitleEn")) + "-dti-" + Eval("ArticleCategoryID") + "-di-" + Eval("ArticleID") + ".aspx" %>' class="news-img">
+                    <img id="Img1" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/article/" + Eval("ImageName") : "~/assets/images/news-img-1.jpg" %>'
+                        runat="server" /></a>
+                <h3 class="news-name">
+                    <a href='<%# progressTitle(Eval("ArticleTitleEn")) + "-dti-" + Eval("ArticleCategoryID") + "-di-" + Eval("ArticleID") + ".aspx" %>'>
+                        <%# Eval("ArticleTitleEn")%></a></h3>
+            </div>
+            <asp:ListView ID="lstListDieuTriHo" runat="server" DataSourceID="odsListDieuTriHo"
+                EnableModelValidation="True">
+                <ItemTemplate>
+                    <li><a href='<%# progressTitle(Eval("ArticleTitleEn")) + "-dti-" + Eval("ArticleCategoryID") + "-di-" + Eval("ArticleID") + ".aspx" %>'>
+                        <%# Eval("ArticleTitleEn")%></a></li>
+                </ItemTemplate>
+                <LayoutTemplate>
+                    <ul class="list-news">
+                        <li runat="server" id="itemPlaceholder"></li>
+                    </ul>
+                </LayoutTemplate>
+            </asp:ListView>
+            <asp:ObjectDataSource ID="odsListDieuTriHo" runat="server" SelectMethod="ArticleSelectAll"
+                TypeName="TLLib.Article">
+                <SelectParameters>
+                    <asp:Parameter DefaultValue="2" Name="StartRowIndex" Type="String" />
+                    <asp:Parameter DefaultValue="7" Name="EndRowIndex" Type="String" />
+                    <asp:Parameter Name="Keyword" Type="String" />
+                    <asp:Parameter Name="ArticleTitle" Type="String" />
+                    <asp:Parameter Name="Description" Type="String" />
+                    <asp:Parameter DefaultValue="1" Name="ArticleCategoryID" Type="String" />
+                    <asp:Parameter Name="Tag" Type="String" />
+                    <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="IsHot" Type="String" />
+                    <asp:Parameter Name="IsNew" Type="String" />
+                    <asp:Parameter Name="FromDate" Type="String" />
+                    <asp:Parameter Name="ToDate" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                    <asp:Parameter Name="Priority" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                </SelectParameters>
+            </asp:ObjectDataSource>
+        </ItemTemplate>
+        <LayoutTemplate>
+            <span runat="server" id="itemPlaceholder" />
+        </LayoutTemplate>
+    </asp:ListView>
+    <asp:ObjectDataSource ID="odsDieuTriHoNoiBat" runat="server" SelectMethod="ArticleSelectAll"
+        TypeName="TLLib.Article">
+        <SelectParameters>
+            <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
+            <asp:Parameter DefaultValue="1" Name="EndRowIndex" Type="String" />
+            <asp:Parameter Name="Keyword" Type="String" />
+            <asp:Parameter Name="ArticleTitle" Type="String" />
+            <asp:Parameter Name="Description" Type="String" />
+            <asp:Parameter DefaultValue="1" Name="ArticleCategoryID" Type="String" />
+            <asp:Parameter Name="Tag" Type="String" />
+            <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+            <asp:Parameter DefaultValue="True" Name="IsHot" Type="String" />
+            <asp:Parameter Name="IsNew" Type="String" />
+            <asp:Parameter Name="FromDate" Type="String" />
+            <asp:Parameter Name="ToDate" Type="String" />
+            <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+            <asp:Parameter Name="Priority" Type="String" />
+            <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+        </SelectParameters>
+    </asp:ObjectDataSource>
+        </div>
+        <div class="col-md-12 col-xs-6">
+    <%--<div class="wrap-video">
+        <a href="#" class="videob">
+            <img src="assets/images/video.jpg" alt="" />
+        </a>
+        <div class="video-content">
+            <h3 class="video-name">
+                <a href="#">SIRO HO BEZUT - Babyface Entertainment</a></h3>
+            <div class="description">
+                Post by admin | 20 lượt xem</div>
+        </div>
+    </div>
+    <ul class="list-video">
+        <li><a href="#" class="video-box"><span class="video-img">
+            <img src="assets/images/video-img.jpg" alt="" />
+            <span class="video-time">00:00</span> <span class="show">đã xem</span> </span><span
+                class="video-content"><span class="video-name">Quảng cáo viên ngậm ho Bezut</span>
+                <span class="description">Post by admin<br />
+                    20 lượt xem </span></span></a>
+            <div class="whidden">
+                <div id="video-1" class="info-vido" data-video="https://youtu.be/xtE8i5sutdw">
+                </div>
+            </div>
+        </li>
+        <li><a href="#" class="video-box"><span class="video-img">
+            <img src="assets/images/video-img.jpg" alt="" />
+            <span class="video-time">00:00</span> <span class="show">đã xem</span> </span><span
+                class="video-content"><span class="video-name">Quảng cáo viên ngậm ho Bezut</span>
+                <span class="description">Post by admin<br />
+                    20 lượt xem </span></span></a>
+            <div class="whidden">
+                <div id="video-2" class="info-vido" data-video="https://youtu.be/wDJ5nol2JKs">
+                </div>
+            </div>
+        </li>
+        <li><a href="#" class="video-box"><span class="video-img">
+            <img src="assets/images/video-img.jpg" alt="" />
+            <span class="video-time">00:00</span> <span class="show">đã xem</span> </span><span
+                class="video-content"><span class="video-name">Quảng cáo viên ngậm ho Bezut</span>
+                <span class="description">Post by admin<br />
+                    20 lượt xem </span></span></a>
+            <div class="whidden">
+                <div id="video-3" class="info-vido" data-video="https://youtu.be/wDJ5nol2JKs">
+                </div>
+            </div>
+        </li>
+    </ul>--%>
+    <asp:ListView ID="lstVideo" runat="server" DataSourceID="odsVideo" EnableModelValidation="True">
+        <ItemTemplate>
+            <div class="wrap-video">
+                <a href='<%# progressTitle(Eval("TitleEn")) + "-vd-" + Eval("VideoID") + ".aspx" %>' class="videob">
+                    <img id="Img2" alt='<%# Eval("ImagePath") %>' src='<%# !string.IsNullOrEmpty(Eval("ImagePath").ToString()) ? "~/res/video/thumbs/" + Eval("ImagePath") : "~/assets/images/video.jpg" %>'
+                        runat="server" />
+                    <span class='<%# !string.IsNullOrEmpty(Eval("ImagePath").ToString()) ? "ico-play" : "hidden" %>'>
+                    </span></a>
+                <div class="video-content">
+                    <h3 class="video-name">
+                        <a href='<%# progressTitle(Eval("TitleEn")) + "-vd-" + Eval("VideoID") + ".aspx" %>'>
+                            <%# Eval("TitleEn") %></a></h3>
+                </div>
+            </div>
+            <asp:ListView ID="lstListVideo" runat="server" DataSourceID="odsListVideo" EnableModelValidation="True">
+                <ItemTemplate>
+                    <li><a href='<%# progressTitle(Eval("TitleEn")) + "-vd-" + Eval("VideoID") + ".aspx" %>' class="video-box"><span class="video-img">
+                        <img id="Img3" alt='<%# Eval("ImagePath") %>' src='<%# !string.IsNullOrEmpty(Eval("ImagePath").ToString()) ? "~/res/video/thumbs/" + Eval("ImagePath") : "~/assets/images/video-img.jpg" %>'
+                            runat="server" />
+                    </span><span class="video-content"><span class="video-name">
+                        <%# Eval("TitleEn") %></span> </span></a>
+                        <div class="whidden">
+                            <div id="video-1" class="info-vido" data-video='<%# string.IsNullOrEmpty(Eval("VideoPath").ToString()) ? Eval("GLobalEmbedScript") : "res/video/" + Eval("VideoPath") %>'>
+                            </div>
+                        </div>
+                    </li>
+                </ItemTemplate>
+                <LayoutTemplate>
+                    <ul class="list-video">
+                        <li runat="server" id="itemPlaceholder"></li>
+                    </ul>
+                </LayoutTemplate>
+            </asp:ListView>
+            <asp:ObjectDataSource ID="odsListVideo" runat="server" SelectMethod="VideoSelectAll"
+                TypeName="TLLib.Video">
+                <SelectParameters>
+                    <asp:Parameter Name="StartRowIndex" Type="String" />
+                    <asp:Parameter Name="EndRowIndex" Type="String" />
+                    <asp:Parameter Name="Title" Type="String" />
+                    <asp:Parameter Name="Description" Type="String" />
+                    <asp:Parameter Name="VideoCategoryID" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                    <asp:Parameter Name="IsHot" Type="String" />
+                    <asp:Parameter Name="IsNew" Type="String" />
+                    <asp:Parameter Name="Priority" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                </SelectParameters>
+            </asp:ObjectDataSource>
+        </ItemTemplate>
+        <LayoutTemplate>
+            <span runat="server" id="itemPlaceholder" />
+        </LayoutTemplate>
+    </asp:ListView>
+    <asp:ObjectDataSource ID="odsVideo" runat="server" SelectMethod="VideoSelectAll"
+        TypeName="TLLib.Video">
+        <SelectParameters>
+            <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
+            <asp:Parameter DefaultValue="1" Name="EndRowIndex" Type="String" />
+            <asp:Parameter Name="Title" Type="String" />
+            <asp:Parameter Name="Description" Type="String" />
+            <asp:Parameter Name="VideoCategoryID" Type="String" />
+            <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+            <asp:Parameter DefaultValue="True" Name="IsHot" Type="String" />
+            <asp:Parameter Name="IsNew" Type="String" />
+            <asp:Parameter Name="Priority" Type="String" />
+            <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
+            <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+        </SelectParameters>
+    </asp:ObjectDataSource>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-xs-6">
+    <%--<div class="news-box news-blue">
+        <h2 class="title-ab text-uppercase">
+            kiến thức bệnh học</h2>
+        <a href="#" class="news-img">
+            <img src="assets/images/dieutriho-img-1.jpg" alt="" /></a>
+        <h3 class="news-name">
+            <a href="#">5 cách chữa ho hiệu quả cho trẻ bằng thảo dược</a></h3>
+    </div>
+    <ul class="list-news">
+        <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+        <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+        <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+        <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+        <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+        <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
+    </ul>--%>
+    <asp:ListView ID="lstKienThucBenhHoc" runat="server" DataSourceID="odsKienThucBenhHoc"
+        EnableModelValidation="True">
+        <ItemTemplate>
+            <div class="news-box news-blue">
+                <h2 class="title-ab text-uppercase">
+                    knowledge</h2>
+                <a href='<%# progressTitle(Eval("ArticleTitleEn")) + "-kci-" + Eval("ArticleCategoryID") + "-ki-" + Eval("ArticleID") + ".aspx" %>' class="news-img">
+                    <img id="Img4" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/article/" + Eval("ImageName") : "~/assets/images/news-img-1.jpg" %>'
+                        runat="server" /></a>
+                <h3 class="news-name">
+                    <a href='<%# progressTitle(Eval("ArticleTitleEn")) + "-kci-" + Eval("ArticleCategoryID") + "-ki-" + Eval("ArticleID") + ".aspx" %>'><%# Eval("ArticleTitleEn")%></a></h3>
+            </div>
+            <asp:ListView ID="lstListKienThucBenhHoc" runat="server" DataSourceID="odsListKienThucBenhHoc"
+                EnableModelValidation="True">
+                <ItemTemplate>
+                    <li><a href='<%# progressTitle(Eval("ArticleTitleEn")) + "-kci-" + Eval("ArticleCategoryID") + "-ki-" + Eval("ArticleID") + ".aspx" %>'>
+                        <%# Eval("ArticleTitleEn")%></a></li>
+                </ItemTemplate>
+                <LayoutTemplate>
+                    <ul class="list-news">
+                        <li runat="server" id="itemPlaceholder"></li>
+                    </ul>
+                </LayoutTemplate>
+            </asp:ListView>
+            <asp:ObjectDataSource ID="odsListKienThucBenhHoc" runat="server" SelectMethod="ArticleSelectAll"
+                TypeName="TLLib.Article">
+                <SelectParameters>
+                    <asp:Parameter DefaultValue="2" Name="StartRowIndex" Type="String" />
+                    <asp:Parameter DefaultValue="7" Name="EndRowIndex" Type="String" />
+                    <asp:Parameter Name="Keyword" Type="String" />
+                    <asp:Parameter Name="ArticleTitle" Type="String" />
+                    <asp:Parameter Name="Description" Type="String" />
+                    <asp:Parameter DefaultValue="3" Name="ArticleCategoryID" Type="String" />
+                    <asp:Parameter Name="Tag" Type="String" />
+                    <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="IsHot" Type="String" />
+                    <asp:Parameter Name="IsNew" Type="String" />
+                    <asp:Parameter Name="FromDate" Type="String" />
+                    <asp:Parameter Name="ToDate" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                    <asp:Parameter Name="Priority" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                </SelectParameters>
+            </asp:ObjectDataSource>
+        </ItemTemplate>
+        <LayoutTemplate>
+            <span runat="server" id="itemPlaceholder" />
+        </LayoutTemplate>
+    </asp:ListView>
+    <asp:ObjectDataSource ID="odsKienThucBenhHoc" runat="server" SelectMethod="ArticleSelectAll"
+        TypeName="TLLib.Article">
+        <SelectParameters>
+            <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
+            <asp:Parameter DefaultValue="1" Name="EndRowIndex" Type="String" />
+            <asp:Parameter Name="Keyword" Type="String" />
+            <asp:Parameter Name="ArticleTitle" Type="String" />
+            <asp:Parameter Name="Description" Type="String" />
+            <asp:Parameter DefaultValue="3" Name="ArticleCategoryID" Type="String" />
+            <asp:Parameter Name="Tag" Type="String" />
+            <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+            <asp:Parameter DefaultValue="True" Name="IsHot" Type="String" />
+            <asp:Parameter Name="IsNew" Type="String" />
+            <asp:Parameter Name="FromDate" Type="String" />
+            <asp:Parameter Name="ToDate" Type="String" />
+            <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+            <asp:Parameter Name="Priority" Type="String" />
+            <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+        </SelectParameters>
+    </asp:ObjectDataSource>
+        </div>
+        <div class="col-md-12 col-xs-6">
+    <div class="adv">
+        <a href="he-thong-phan-phoi.aspx">
+            <img src="../assets/images/images-1.jpg" alt="" /></a>
+    </div>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="cphAsideBottom" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="cphPopup" runat="Server">
+    <asp:ContentPlaceHolder ID="cphPopup" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
