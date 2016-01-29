@@ -2,13 +2,13 @@
 body
 {
     /*background-color: #014987;*/
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-size: 15px;
     line-height: 24px;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 {
-    font-family: 'Open Sans', sans-serif;
+     font-family: 'Open Sans', Arial, sans-serif;
  }
 .clr
 {
@@ -30,6 +30,10 @@ a:hover
 fieldset, a img, img
 {
     border: none;
+}
+a {
+     font-family: Arial, sans-serif;
+    
 }
 :focus
 {
@@ -933,7 +937,8 @@ hr
 {
     color: #005aa8;
     font-size: 24px;
-    font-weight: 800;
+    /*font-weight: 800;*/
+    font-weight: 700;
     line-height: 32px;
 }
 .headno .title
@@ -975,7 +980,8 @@ hr
     display: block;
     float: left;
     font-size: 14px;
-    font-weight: 700;
+    /*font-weight: 700;*/
+    font-weight: 600;
     line-height: 22px;
     /*padding: 7px 9px;*/
     padding: 7px 7px 8px;
@@ -1899,7 +1905,7 @@ hr
 
     .mapbox .box
     {
-        font-family: 'Open Sans', sans-serif;
+         font-family: 'Open Sans', Arial, sans-serif;
         width: 290px;
     }
 
@@ -1913,7 +1919,7 @@ hr
             #map .box h2
             {
                 color: #005fae;
-                font-family: 'Open Sans', sans-serif;
+                 font-family: 'Open Sans', Arial, sans-serif;
                 font-size: 14px;
                 font-weight: 600;
                 line-height: 24px;
