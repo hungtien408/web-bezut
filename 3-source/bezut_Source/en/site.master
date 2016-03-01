@@ -136,9 +136,9 @@
                     </ul>
                     <div class="header-bottom">
                         <div id="searchbox" class="search-form">
-                            <asp:Button ID="Button1" CssClass="search-btn" runat="server" Text="" />
+                            <asp:Button ID="btnSearch" CssClass="search-btn" runat="server" Text="" OnClick="btnSearch_Click"/>
                             <div class="search-input">
-                                <asp:TextBox ID="TextBox1" CssClass="search-text" runat="server" Text="Search"></asp:TextBox>
+                                <asp:TextBox ID="txtSearch" CssClass="search-text" runat="server" Text="Search" onfocus="if(this.value=='Search...')this.value=''" onblur="if(this.value=='')this.value='Search...'"></asp:TextBox>
                             </div>
                         </div>
                         <div class="share desktop-showhide">
