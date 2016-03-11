@@ -1,5 +1,8 @@
-﻿<%@ Master Language="C#" MasterPageFile="~/site-sub.master" AutoEventWireup="true" CodeFile="site-kienthuc.master.cs" Inherits="site_kienthuc" %>
+﻿<%@ Master Language="C#" MasterPageFile="~/site-sub.master" AutoEventWireup="true"
+    CodeFile="site-kienthuc.master.cs" Inherits="site_kienthuc" %>
+
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register TagPrefix="asp" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI, Version=2012.3.1016.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -19,85 +22,87 @@
             </div>
         </div>
         <div class="col-md-12 col-xs-6">
-    <asp:ListView ID="lstVideo" runat="server" DataSourceID="odsVideo" EnableModelValidation="True">
-        <ItemTemplate>
-            <div class="wrap-video">
-                <a href='<%# progressTitle(Eval("Title")) + "-vd-" + Eval("VideoID") + ".aspx" %>' class="videob">
-                    <img id="Img1" alt='<%# Eval("ImagePath") %>' src='<%# !string.IsNullOrEmpty(Eval("ImagePath").ToString()) ? "~/res/video/thumbs/" + Eval("ImagePath") : "~/assets/images/video.jpg" %>'
-                        runat="server" />
-                    <span class='<%# !string.IsNullOrEmpty(Eval("ImagePath").ToString()) ? "ico-play" : "hidden" %>'></span> 
-                </a>
-                <div class="video-content">
-                    <h3 class="video-name">
-                        <a href='<%# progressTitle(Eval("Title")) + "-vd-" + Eval("VideoID") + ".aspx" %>'>
-                            <%# Eval("Title") %></a></h3>
-                    <%--<div class="description">
-                        Post by admin | 20 lượt xem</div>--%>
-                </div>
-            </div>
-            <asp:ListView ID="lstListVideo" runat="server" DataSourceID="odsListVideo" EnableModelValidation="True">
+            <asp:ListView ID="lstVideo" runat="server" DataSourceID="odsVideo" EnableModelValidation="True">
                 <ItemTemplate>
-                    <li><a href='<%# progressTitle(Eval("Title")) + "-vd-" + Eval("VideoID") + ".aspx" %>' class="video-box"><span class="video-img">
-                        <img id="Img2" alt='<%# Eval("ImagePath") %>' src='<%# !string.IsNullOrEmpty(Eval("ImagePath").ToString()) ? "~/res/video/thumbs/" + Eval("ImagePath") : "~/assets/images/video-img.jpg" %>'
-                            runat="server" />
-                        <%--<span class="video-time">00:00</span>
+                    <div class="wrap-video">
+                        <a href='<%# progressTitle(Eval("Title")) + "-vd-" + Eval("VideoID") + ".aspx" %>'
+                            class="videob">
+                            <img id="Img1" alt='<%# Eval("ImagePath") %>' src='<%# !string.IsNullOrEmpty(Eval("ImagePath").ToString()) ? "~/res/video/thumbs/" + Eval("ImagePath") : "~/assets/images/video.jpg" %>'
+                                runat="server" />
+                            <span class='<%# !string.IsNullOrEmpty(Eval("ImagePath").ToString()) ? "ico-play" : "hidden" %>'>
+                            </span></a>
+                        <div class="video-content">
+                            <h3 class="video-name">
+                                <a href='<%# progressTitle(Eval("Title")) + "-vd-" + Eval("VideoID") + ".aspx" %>'>
+                                    <%# Eval("Title") %></a></h3>
+                            <%--<div class="description">
+                        Post by admin | 20 lượt xem</div>--%>
+                        </div>
+                    </div>
+                    <asp:ListView ID="lstListVideo" runat="server" DataSourceID="odsListVideo" EnableModelValidation="True">
+                        <ItemTemplate>
+                            <li><a href='<%# progressTitle(Eval("Title")) + "-vd-" + Eval("VideoID") + ".aspx" %>'
+                                class="video-box"><span class="video-img">
+                                    <img id="Img2" alt='<%# Eval("ImagePath") %>' src='<%# !string.IsNullOrEmpty(Eval("ImagePath").ToString()) ? "~/res/video/thumbs/" + Eval("ImagePath") : "~/assets/images/video-img.jpg" %>'
+                                        runat="server" />
+                                    <%--<span class="video-time">00:00</span>
                         <span class="show">đã xem</span>--%>
-                    </span><span class="video-content"><span class="video-name">
-                        <%# Eval("Title") %></span>
-                        <%--<span class="description">
+                                </span><span class="video-content"><span class="video-name">
+                                    <%# Eval("Title") %></span>
+                                    <%--<span class="description">
                             Post by admin<br />
                             20 lượt xem
                         </span>--%>
-                    </span></a>
-                        <div class="whidden">
-                            <div id="video-1" class="info-vido" data-video='<%# string.IsNullOrEmpty(Eval("VideoPath").ToString()) ? Eval("GLobalEmbedScript") : "res/video/" + Eval("VideoPath") %>'>
-                            </div>
-                        </div>
-                    </li>
+                                </span></a>
+                                <div class="whidden">
+                                    <div id="video-1" class="info-vido" data-video='<%# string.IsNullOrEmpty(Eval("VideoPath").ToString()) ? Eval("GLobalEmbedScript") : "res/video/" + Eval("VideoPath") %>'>
+                                    </div>
+                                </div>
+                            </li>
+                        </ItemTemplate>
+                        <LayoutTemplate>
+                            <ul class="list-video">
+                                <li runat="server" id="itemPlaceholder"></li>
+                            </ul>
+                        </LayoutTemplate>
+                    </asp:ListView>
+                    <asp:ObjectDataSource ID="odsListVideo" runat="server" SelectMethod="VideoSelectAll"
+                        TypeName="TLLib.Video">
+                        <SelectParameters>
+                            <asp:Parameter Name="StartRowIndex" Type="String" />
+                            <asp:Parameter Name="EndRowIndex" Type="String" />
+                            <asp:Parameter Name="Title" Type="String" />
+                            <asp:Parameter Name="Description" Type="String" />
+                            <asp:Parameter Name="VideoCategoryID" Type="String" />
+                            <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                            <asp:Parameter Name="IsHot" Type="String" />
+                            <asp:Parameter Name="IsNew" Type="String" />
+                            <asp:Parameter Name="Priority" Type="String" />
+                            <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
+                            <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                        </SelectParameters>
+                    </asp:ObjectDataSource>
                 </ItemTemplate>
                 <LayoutTemplate>
-                    <ul class="list-video">
-                        <li runat="server" id="itemPlaceholder"></li>
-                    </ul>
+                    <span runat="server" id="itemPlaceholder" />
                 </LayoutTemplate>
             </asp:ListView>
-            <asp:ObjectDataSource ID="odsListVideo" runat="server" SelectMethod="VideoSelectAll"
+            <asp:ObjectDataSource ID="odsVideo" runat="server" SelectMethod="VideoSelectAll"
                 TypeName="TLLib.Video">
                 <SelectParameters>
-                    <asp:Parameter Name="StartRowIndex" Type="String" />
-                    <asp:Parameter Name="EndRowIndex" Type="String" />
+                    <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
+                    <asp:Parameter DefaultValue="1" Name="EndRowIndex" Type="String" />
                     <asp:Parameter Name="Title" Type="String" />
                     <asp:Parameter Name="Description" Type="String" />
                     <asp:Parameter Name="VideoCategoryID" Type="String" />
                     <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
-                    <asp:Parameter Name="IsHot" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="IsHot" Type="String" />
                     <asp:Parameter Name="IsNew" Type="String" />
                     <asp:Parameter Name="Priority" Type="String" />
                     <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
                     <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
                 </SelectParameters>
             </asp:ObjectDataSource>
-        </ItemTemplate>
-        <LayoutTemplate>
-            <span runat="server" id="itemPlaceholder" />
-        </LayoutTemplate>
-    </asp:ListView>
-    <asp:ObjectDataSource ID="odsVideo" runat="server" SelectMethod="VideoSelectAll"
-        TypeName="TLLib.Video">
-        <SelectParameters>
-            <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
-            <asp:Parameter DefaultValue="1" Name="EndRowIndex" Type="String" />
-            <asp:Parameter Name="Title" Type="String" />
-            <asp:Parameter Name="Description" Type="String" />
-            <asp:Parameter Name="VideoCategoryID" Type="String" />
-            <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
-            <asp:Parameter DefaultValue="True" Name="IsHot" Type="String" />
-            <asp:Parameter Name="IsNew" Type="String" />
-            <asp:Parameter Name="Priority" Type="String" />
-            <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
-            <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
-        </SelectParameters>
-    </asp:ObjectDataSource>
         </div>
     </div>
     <div class="wrap-question">
@@ -133,29 +138,40 @@
                     <div class="question-input">
                         <asp:TextBox ID="txtEmail" CssClass="question-text corner" runat="server"></asp:TextBox>
                         <asp:TextBoxWatermarkExtender ID="txtEmail_WatermarkExtender" runat="server" Enabled="True"
-                                WatermarkText="Email" TargetControlID="txtEmail">
-                            </asp:TextBoxWatermarkExtender>
-                            <asp:RegularExpressionValidator CssClass="lb-error" ID="RegularExpressionValidator1"
-                                runat="server" ValidationGroup="SendEmail" ControlToValidate="txtEmail" ErrorMessage="Email không đúng!"
-                                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"
-                                ForeColor="Red"></asp:RegularExpressionValidator>
-                            <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator2" runat="server"
-                                ValidationGroup="SendAnswer" ControlToValidate="txtEmail" ErrorMessage="Thông tin bắt buộc!"
-                                Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+                            WatermarkText="Email" TargetControlID="txtEmail">
+                        </asp:TextBoxWatermarkExtender>
+                        <asp:RegularExpressionValidator CssClass="lb-error" ID="RegularExpressionValidator1"
+                            runat="server" ValidationGroup="SendEmail" ControlToValidate="txtEmail" ErrorMessage="Email không đúng!"
+                            ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"
+                            ForeColor="Red"></asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator2" runat="server"
+                            ValidationGroup="SendAnswer" ControlToValidate="txtEmail" ErrorMessage="Thông tin bắt buộc!"
+                            Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
                     <div class="question-input">
-                        <asp:TextBox ID="txtNoiDung" CssClass="question-area corner" runat="server"
-                            TextMode="MultiLine"></asp:TextBox>
+                        <asp:TextBox ID="txtNoiDung" CssClass="question-area corner" runat="server" TextMode="MultiLine"></asp:TextBox>
                         <asp:TextBoxWatermarkExtender ID="txtNoiDung_WatermarkExtender" runat="server" Enabled="True"
-                                WatermarkText="Nội dung câu hỏi" TargetControlID="txtNoiDung">
-                            </asp:TextBoxWatermarkExtender>
-                            <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator3" runat="server"
-                                ValidationGroup="SendAnswer" Display="Dynamic" ControlToValidate="txtNoiDung"
-                                ErrorMessage="Thông tin bắt buộc!" ForeColor="Red"></asp:RequiredFieldValidator>
+                            WatermarkText="Nội dung câu hỏi" TargetControlID="txtNoiDung">
+                        </asp:TextBoxWatermarkExtender>
+                        <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator3" runat="server"
+                            ValidationGroup="SendAnswer" Display="Dynamic" ControlToValidate="txtNoiDung"
+                            ErrorMessage="Thông tin bắt buộc!" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
                     <div class="question-input">
-                        <asp:Button ID="btnSendAnswer" CssClass="question-btn" runat="server" 
-                            Text="Gửi câu hỏi"  ValidationGroup="SendAnswer" onclick="btnSendAnswer_Click"/>
+                        <asp:TextBox ID="txtVerifyCode" CssClass="question-text corner" runat="server"></asp:TextBox>
+                        <asp:TextBoxWatermarkExtender ID="txtVerifyCode_WatermarkExtender" runat="server"
+                            Enabled="True" WatermarkText="Mã xác nhận" TargetControlID="txtVerifyCode">
+                        </asp:TextBoxWatermarkExtender>
+                        <asp:RadCaptcha ID="RadCaptcha1" ValidatedTextBoxID="txtVerifyCode" ValidationGroup="SendAnswer"
+                            runat="server" Display="Dynamic" ErrorMessage="Mã xác nhận: không chính xác."
+                            CaptchaLinkButtonText="Refesh" CssClass="capchaans" EnableRefreshImage="True">
+                            <captchaimage renderimageonly="True" width="125" height="35" backgroundnoise="High"
+                                backgroundcolor="White" textcolor="Black" fontfamily="Tohoma" textlength="5" />
+                        </asp:RadCaptcha>
+                    </div>
+                    <div class="question-input">
+                        <asp:Button ID="btnSendAnswer" CssClass="question-btn" runat="server" Text="Gửi câu hỏi"
+                            ValidationGroup="SendAnswer" OnClick="btnSendAnswer_Click" />
                     </div>
                     <div class="question-input">
                         <asp:Label runat="server" ID="lblMessage" ForeColor="red"></asp:Label>
@@ -175,5 +191,3 @@
     <asp:ContentPlaceHolder ID="cphPopup" runat="server">
     </asp:ContentPlaceHolder>
 </asp:Content>
-
-

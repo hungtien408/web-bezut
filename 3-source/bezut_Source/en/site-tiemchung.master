@@ -1,5 +1,6 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/en/site-sub.master" AutoEventWireup="true" CodeFile="site-tiemchung.master.cs" Inherits="site_tiemchung" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register TagPrefix="asp" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI, Version=2012.3.1016.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -15,7 +16,7 @@
         <div class="col-md-12 col-xs-6">
     <div class="adv">
         <a href="he-thong-phan-phoi.aspx">
-            <img src="assets/images/images-1.jpg" alt="" /></a>
+            <img src="../assets/images/images-1.jpg" alt="" /></a>
     </div>
         </div>
         <div class="col-md-12 col-xs-6">
@@ -152,6 +153,18 @@
                             <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator3" runat="server"
                                 ValidationGroup="SendAnswer" Display="Dynamic" ControlToValidate="txtNoiDung"
                                 ErrorMessage="Information required!" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </div>
+                    <div class="question-input">
+                        <asp:TextBox ID="txtVerifyCode" CssClass="question-text corner" runat="server"></asp:TextBox>
+                        <asp:TextBoxWatermarkExtender ID="txtVerifyCode_WatermarkExtender" runat="server"
+                            Enabled="True" WatermarkText="Code" TargetControlID="txtVerifyCode">
+                        </asp:TextBoxWatermarkExtender>
+                        <asp:RadCaptcha ID="RadCaptcha1" ValidatedTextBoxID="txtVerifyCode" ValidationGroup="SendAnswer"
+                            runat="server" Display="Dynamic" ErrorMessage="Code: not match."
+                            CaptchaLinkButtonText="Refesh" CssClass="capchaans" EnableRefreshImage="True">
+                            <captchaimage renderimageonly="True" width="125" height="35" backgroundnoise="High"
+                                backgroundcolor="White" textcolor="Black" fontfamily="Tohoma" textlength="5" />
+                        </asp:RadCaptcha>
                     </div>
                     <div class="question-input">
                         <asp:Button ID="btnSendAnswer" CssClass="question-btn" runat="server" 

@@ -30,15 +30,19 @@ public partial class site_phanphoi : System.Web.UI.MasterPage
     }
     protected void btnSendAnswer_Click(object sender, EventArgs e)
     {
-        var oComment = new Comment();
-        int i = oComment.CommentInsert(txtHoTen.Text.Trim(), "", txtTitle.Text.Trim(), "", "", txtEmail.Text.Trim(), txtNoiDung.Text.Trim(), "", "", "", "", "", "");
-        if (i > 0)
+        if (RadCaptcha1.IsValid)
         {
-            txtTitle.Text = "";
-            txtHoTen.Text = "";
-            txtEmail.Text = "";
-            txtNoiDung.Text = "";
-            lblMessage.Text = "Gửi câu hỏi thành công !";
+            var oComment = new Comment();
+            int i = oComment.CommentInsert(txtHoTen.Text.Trim(), "", txtTitle.Text.Trim(), "", "", txtEmail.Text.Trim(),
+                txtNoiDung.Text.Trim(), "", "", "", "", "", "");
+            if (i > 0)
+            {
+                txtTitle.Text = "";
+                txtHoTen.Text = "";
+                txtEmail.Text = "";
+                txtNoiDung.Text = "";
+                lblMessage.Text = "Gửi câu hỏi thành công !";
+            }
         }
     }
 }

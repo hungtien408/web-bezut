@@ -310,6 +310,15 @@
                         <%# Membership.GetUser( Eval("UserName").ToString()).Email %>--%>
                         </ItemTemplate>
                     </asp:GridTemplateColumn>
+                    <asp:GridTemplateColumn DataField="Priority" HeaderStyle-Width="1%" HeaderText="Thứ tự"
+                        SortExpression="Priority">
+                        <ItemTemplate>
+                            <asp:RadNumericTextBox ID="txtPriority" runat="server" Width="70px" Text='<%# Bind("Priority") %>'
+                                ShowSpinButtons="true" MinValue="0" EmptyMessage="Thứ tự..." Type="Number">
+                                <NumberFormat AllowRounding="false" DecimalDigits="0" GroupSeparator="." />
+                            </asp:RadNumericTextBox>
+                        </ItemTemplate>
+                    </asp:GridTemplateColumn>
                     <asp:GridTemplateColumn HeaderText="Duyệt" DataField="IsApproved" SortExpression="IsApproved">
                         <ItemTemplate>
                             <asp:CheckBox ID="chkIsApproved" runat="server" Checked='<%# Eval("IsApproved") == DBNull.Value ? false : Convert.ToBoolean(Eval("IsApproved"))%>'
@@ -365,6 +374,17 @@
                                             Size 270 x 198</p>
                                         <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="Sai định dạng ảnh (*.jpg, *.jpeg, *.gif, *.png)"
                                             ClientValidationFunction="validateRadUpload" Display="Dynamic"></asp:CustomValidator>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="left">
+                                        Thứ tự
+                                    </td>
+                                    <td>
+                                        <asp:RadNumericTextBox ID="txtPriority" runat="server" Width="500px" Text='<%# Bind("Priority") %>'
+                                            EmptyMessage="Thứ tự..." Type="Number">
+                                            <NumberFormat AllowRounding="false" DecimalDigits="0" GroupSeparator="." />
+                                        </asp:RadNumericTextBox>
                                     </td>
                                 </tr>
                                 <tr>
