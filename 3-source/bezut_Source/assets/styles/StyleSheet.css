@@ -106,7 +106,7 @@ p {
     top: -25px;
     left: 0;
     position: relative;
-    width: 940px;
+    width: 1100px;
 }
 .group-node {
     padding-top: 10px;
@@ -114,7 +114,10 @@ p {
 }
 .group-node .group-text {
     float: left;
-    width: 270px;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 250px;
 }
 .group-node .group-text .description {
     text-align: center;
@@ -125,11 +128,17 @@ p {
     text-align: center;
     }
 #boxgroup-2 .groupa-1 {
-    margin-right: 55px;
+    margin-right: 45px;
+}
+#boxgroup-2 .groupa-2 {
+    margin-right: 40px;
 }
 #boxgroup-2 .groupa-3 {
+    margin-top: -15px;
+}
+#boxgroup-2 .groupa-4 {
     float: right;
-    margin-top: -35px;
+    margin-top: -65px;
 }
 .mp15 {
     margin-bottom: 15px;

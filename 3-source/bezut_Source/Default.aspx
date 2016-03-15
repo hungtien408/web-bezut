@@ -6,6 +6,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBanner" runat="Server">
     <div class="wrapper-banner">
+        <div class="container">
+            
         <div id="banner">
             <div class="doc-bg"><img src="assets/images/do-bg.gif" alt=""/></div>
             <div class="doctor">
@@ -20,7 +22,7 @@
                 </div>--%>
                 <asp:ListView ID="lstBanner" runat="server" DataSourceID="odsBanner" EnableModelValidation="True">
                     <ItemTemplate>
-                        <img alt='<%# Eval("FileName") %>' src='<%# !string.IsNullOrEmpty(Eval("FileName").ToString()) ? "~/res/advertisement/" + Eval("FileName") : "~/assets/images/banner-img-1.jpg" %>'
+                        <img id="Img3" alt='<%# Eval("FileName") %>' src='<%# !string.IsNullOrEmpty(Eval("FileName").ToString()) ? "~/res/advertisement/" + Eval("FileName") : "~/assets/images/banner-img-1.jpg" %>'
                             runat="server" />
                     </ItemTemplate>
                     <LayoutTemplate>
@@ -45,6 +47,7 @@
                     </SelectParameters>
                 </asp:ObjectDataSource>
             </div>
+        </div>
         </div>
     </div>
     <%--<div class="bannerbg">

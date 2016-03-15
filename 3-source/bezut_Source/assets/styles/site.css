@@ -424,7 +424,7 @@ hr
     background-color: #fff;
     /*min-height: 335px;
     min-width: 1170px;*/
-    padding-left: 22%;
+    padding-left: 30%;
     position: relative;
 }
 #banner .doctor, .doc-bg
@@ -437,7 +437,7 @@ hr
 }
 #banner .doctor
 {
-    width: 22%;
+    width: 30%;
 }
 #banner .doctor a
 {
