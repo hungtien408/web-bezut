@@ -16,19 +16,19 @@
             <div id="logo"><a href="~/" runat="server"><img src="assets/images/nghiencuu/logo.png" alt=""/></a></div>
             <div class="row">
                 <div class="col-xs-6">
-                    <div class="box-head">
+                    <%--<div class="box-head">
                         <h5>“Thuận thiên giả tồn, Nghịch thiên giả vong”</h5>                        <h5>(Thuận theo tự nhiên thì tồn tại, trái với tự nhiên thì bị diệt vong)</h5>                        <h5 class="athur">- Lão Tữ-</h5>
-                    </div>
+                    </div>--%>
                     <div class="description">
-                    <p>Kết hợp những tinh hoa y học cổ truyền trong việc chữa bệnh bằng các thảo dược thiên nhiên cùng với những tiến bộ của y học hiện đại sử dụng các phương pháp giải phẩu, xét nghiệm cận lâm sàng và sử dụng các thuốc hoá dược. Đã hình thành nên trường phái Y học tự nhiên với hiệu quả chữa bệnh tốt hơn.</p>                    <p><strong>Y học tự nhiên</strong> - Phương pháp chữa bệnh Đông Tây y kết hợp chính là xu thế phát triển tự nhiên của các nền y học thế giới. Bắt nhịp với xu thế đó, Ban lãnh đạo công ty CP Dược Phẩm Vinacare phối hợp với đơn vị nghiên cứu đã cho ra đời các dòng sản phẩm <strong>Siro ho Bezut, Viên ngậm ho Bezut, Viên ngậm ho Bezut không đường</strong> mang đặc trưng của trường phái y học tự nhiên. Là sự phối kết hợp độc đáo giữa tinh hoa y học cổ truyền phương Đông và Y học hiện đại phương Tây.</p>
+                    <p>Nghiên cứu lý luận của Y học Cổ truyền Phương Đông kết hợp với các thành tựu và kết quả nghiên cứu của Y học Hiện đại cũng như kinh nghiệm sử dụng thảo dược trong điều trị ho của cả hai nền y học Phương Đông và Phương Tây, Công ty Cổ Phần Dược Phẩm Vinacare phối hợp với các đơn vị nghiên cứu đã cho ra đời các dòng sản phẩm <strong>HO BEZUT bao gồm: Siro ho Bezut, Viên ngậm ho Bezut, Viên ngậm ho Bezut không đường (dành cho người kiêng đường)…</strong> là sự kết hợp độc đáo của hai nền y học Phương Đông và Phương Tây trong sử dụng thảo dược để giảm ho, long đờm cho hiệu quả cao và rất an toàn.</p>
 
                     </div>
                 </div>
-                <div class="col-xs-6">
-                    <h5 class="ph330"><img src="assets/images/nghiencuu/titlem1.png" alt="Tìm hiểu trong Y học phương Tây"/></h5>
-                    <div class="description w390">
-                    Từ thời cổ xưa, Hippocrates, ông tổ của nghề thuốc, đã sử dụng hầu hết các bộ phận của <strong>cây thường xuân</strong> để chữa nhiều bệnh như bệnh lỵ, đau tai, bệnh gút và sốt. Đến đầu thế kỷ 16, cây thường xuân đã ngày càng được biết đến nhiều hơn với hiệu quả điều trị bệnh viêm đường hô hấp. Cho đến ngày nay, với sự phát triển của Y dược học hiện đại, lá thường xuân đã được sử dụng để bào chế nên các sản phẩm <strong>giảm ho hiệu quả</strong>.
-
+                
+                <div class="col-xs-8">
+                    <h5 class="ph100"><img src="assets/images/nghiencuu/titlem1.png" alt="Tìm hiểu trong Y học phương Tây"/></h5>
+                    <div class="description pl140">
+                    <strong>Thường xuân là một loài cây gỗ leo với tên gọi khoa học là Hedera helix, họ Araliaceae (họ Nhân sâm)</strong>. Các nghiên cứu công bố gần đây cho thấy sau 7 ngày sử dụng siro chứa cao lá Thường Xuân 95% bệnh nhân hết các triệu chứng ho rõ rệt. Các phân tích đã chỉ ra thành phần trong Saponin của cao lá Thường Xuân có chứa α- Hederin, Hederacosid C có tác dụng chống co thắt, long đờm, chống viêm và kháng khuẩn. Ngày nay, cao lá Thường Xuân đã và đang được ứng dụng rộng rãi trong điều trị ho và viêm đường hô hấp tại Châu Âu cũng như nhiều nước trên thế giới. Tuy nhiên để nâng cao hiệu quả điều trị người ta thường phối hợp Thường Xuân với các thảo dược khác nhằm đạt hiệu quả 100% hết các triệu chứng ho.
                     </div>
                 </div>
             </div>
@@ -39,12 +39,27 @@
             <div class="box-text">
                 <h5 class="mp15"><img src="assets/images/nghiencuu/titlem2.png" alt="Y học phương đông"/></h5>
                 <div class="description">
-                    <p>Bài thuốc lưu truyền trong dân gian Quất (tắc) chưng đường phèn có hiệu quả cao trong giảm ho. Tinh dầu trong quả quất sẽ kích thích hệ hô hấp, giúp long đờm và tống đờm ra ngoài. Ngoài ra, trong quả Quất có nhiều vitamin trong đó chứa hàm lượng lớn Vitamin C giúp tăng cường sức đề kháng của cơ thể và chống cảm cúm.</p>
-                    <p>Phối hợp cùng với các tinh dầu khác giảm ho hiệu quả:</p>
+                    <p>Y học Cổ truyền Phương Đông đã hình thành từ hàng ngàn năm nay với những kiến thức phong phú về sử dụng Động – Thực vật trong chữa bệnh. Đối với chứng Ho, Y Học cổ truyền Phương Đông đã đúc kết ra những thảo dược sau có tác giảm ho, long đờm cực kỳ hiệu quả: </p>
                 </div>
             </div>
             <div class="gourp-img">
-                <img src="assets/images/nghiencuu/boxm-1.png" alt=""/></div>
+                <img src="assets/images/nghiencuu/boxm-1.png" alt=""/>
+                
+                <div class="group-node">
+                    <div class="group-text groupa-1">
+                        <h6>Tinh dầu Gừng</h6>
+                        <div class="description">Giảm nôn (trớ), làm ấm, chống viêm, giúp long đờm</div>
+                    </div>
+                    <div class="group-text groupa-2">
+                        <h6>Tinh dầu Tràm</h6>
+                        <div class="description">Giảm ho, cảm lạnh, chống viêm nhiễm...</div>
+                    </div>
+                    <div class="group-text groupa-3">
+                        <h6>Tinh dầu Húng Chanh</h6>
+                        <div class="description">Trị viêm phế quản, ho hen, viêm họng, khản tiếng, cảm cúm</div>
+                    </div>
+                </div>
+            </div>
             <div class="group-content">
                 <img src="assets/images/nghiencuu/boxm-2.png" alt=""/>
                 <div class="group-node">
@@ -60,7 +75,23 @@
                         <h6>Tinh dầu Húng Chanh</h6>
                         <div class="description">Trị viêm phế quản, ho hen, viêm họng, khản tiếng, cảm cúm</div>
                     </div>
+                    <div class="group-text groupa-4">
+                        <h6>Tinh dầu Quất</h6>
+                        <div class="description">Kích thích hô hấp, giúp long đờm và tống đờm ra ngoài. Theo đông y có tác dụng kiện tỳ, thông phổi, trừ đờm, trị ho cảm,...</div>
+                    </div>
                     <div class="clr"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="boxgroup-5" class="full-cover fade-it  effect-it">
+        <div class="container">
+            <div class="box-text">
+                <div class="box-wrap">
+                    <h5 class="mp15"><img src="assets/images/nghiencuu/titlem5.png" alt="phương thuốc dân gian trị ho hiệu quả"/></h5>
+                    <div class="description">
+                        <p>Quất (Tắc), đường phèn là phương thuốc cổ phương với hiệu quả trị ho, long đờm hết sức độc đáo và hiệu quả. Đường phèn bổ trung ích khí, hoà vị, nhuận phế, chỉ khái, trừ đàm. Quất (tắc) theo đông y tác dụng kiện tỳ, thông phổi, trừ đờm, trị ho cảm, ngoài ra trong dịch ép quả tắc có rất nhiều Vitamin đặc biệt là Vitamin C giúp tăng cường sức đề kháng, nhanh khỏi bệnh.”</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,10 +106,9 @@
                     <div class="box-text">
                         <h5><img src="assets/images/nghiencuu/titlem3.png" alt="sự kết hợp độc đáo mang hiệu quả vượt trội"/></h5>
                         <div class="description">
-                            <div class="desl">
-                                <div class="desr">Sự phối hợp độc đáo giữa thành tựu y học phương Tây và các thảo dược quý của nền y học phương Đông (Bài thuốc Quất (Tắc) chưng đường phèn, tinh dầu của Tràm, Gừng, Húng Chanh) - Giúp bổ phế long đờm, giảm ho, giảm nôn trớ khi ho"</div>
-                            </div>
+                            Chắt lọc và kết hợp tinh hoa y học cổ truyền Phương Đông và Y học Phương tây trong sử dụng thảo dược giúp giảm ho, long đờm hiệu quả, an toàn đã cho ra đời bộ sản phẩm Ho Bezut
                         </div>
+                        <img src="assets/images/nghiencuu/boxm-332.png" alt=""/>
                     </div>
                 </div>
             </div>
@@ -87,26 +117,16 @@
                     <div class="box-group">
                         <div class="wrapper-in">
                             <h5><img src="assets/images/nghiencuu/titleb.png" alt="đưa công thức vào thực tiễn"/></h5>
-                            <div class="box-text">
-                                <div class="group-text groupa-1">
-                                    <h6><span class="bgl"></span>Hãng cung cấp nguyên liệu</h6>
-                                    <div class="description">Nhập khẩu Cao lá Thường xuân trong từ Hãng Naturex - <strong>Hãng dược phẩm nổi tiếng của Pháp</strong>. Naturex có 16 địa điểm sản xuất trên 50 quốc gia khác nhau</div>
-                                </div>
-                                <div class="group-text groupa-2">
-                                    <h6><span class="bgl"></span>Nhà sản xuất</h6>
-                                    <div class="description">Tiến hành sản xuất tại <strong>Công ty Cổ phần Dược phẩm Thiên Nhiên Việt</strong></div>
-                                </div>
-                            </div>
-                            <div class="group-quytrinh">
-                                <img src="assets/images/nghiencuu/quytrinh-4.png" alt=""/>
-                            </div>
+                            <div class="box-text">Naturex - hãng dược phẩm nổi tiếng của Pháp có 15 cơ sở sản xuất với hơn 1700 nhân viên</div>
+                            
                             <div class="clr"></div>
                         </div>
-
+                        <div class="group-quytrinh">
+                                <img src="assets/images/nghiencuu/quytrinh-4.png" alt=""/>
+                            </div>
                     </div>
                     <div class="clr"></div>
                 </div>
-                <div class="bgr"></div>
             </div>
         </div>
     </div>
@@ -115,13 +135,18 @@
             <div class="container">
                 <div class="box-text">
                     <%--<h5><img src="assets/images/nghiencuu/titlem4.png" alt="Bộ sản phẩm Siro ho Bezut, Viên ngậm ho Bezut không đường"/></h5>--%>
-                    <h5>Bộ sản phẩm <strong>Siro ho Bezut,</strong><br/><strong class="ml105">Viên ngậm ho Bezut,</strong><br/><strong class="ml120">Viên ngậm ho Bezut không đường</strong></h5>
-                    <div class="box-img"><img src="assets/images/nghiencuu/imgbox.jpg" alt=""/></div>
-                    <div class="description">
-                        <h6>Sản phẩm thảo dược giảm ho với nhiều ưu điểm vượt trội</h6>
-                        <p>Siro ho Bezut: Bổ phế, long đờm, giảm ho, giảm nôn trớ khi ho</p>                        <p>Viên ngậm ho Bezut giúp làm ấm họng, giảm các triệu chứng ho, ngứa họng, đau rát họng.</p> 
-                        <p>Viên ngậm ho Bezut không đường sử dụng được cho những người kiêng đường.</p>
-                    </div>
+                    <ul>
+                        <li>
+                            <h5>Nhà sản xuất</h5>
+                            <p>Tiến hành sản xuất tại <strong>Công ty Cổ phần Dược phẩm Thiên Nhiên Việt</strong></p>
+                        </li>
+                        <li>
+                            <h5>Công ty chịu trách nhiệm sản phẩm và phân phối</h5>
+                            <p><strong>Công ty Cổ phần Dược phẩm VinaCare</strong></p>
+                        </li>
+                    </ul>
+                    <div class="box-img"><img src="assets/images/nghiencuu/imgbox.png" alt=""/></div>
+                    
                 </div>
             </div>
         </div>

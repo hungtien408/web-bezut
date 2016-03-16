@@ -35,6 +35,16 @@ body {
         padding: 0 15px;
         width: 570px;
     }
+    .row .col-xs-8 {
+        float: right;
+        width: 690px;
+    }
+.ph100 {
+    margin-top: 100px;
+}
+.pl140 {
+    padding-left: 140px;
+}
 .box-head h5 {
     color: #9a7b3d;
     font-size: 18px;
@@ -82,10 +92,10 @@ p {
     background-image: url(../images/nghiencuu/bgm-2.jpg);
     color: #fff;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 24px;
 }
     #boxgroup-2 .box-text {
-        padding-top: 200px;
+        padding-top: 300px;
         padding-left: 70px;
         position: relative;
         width: 685px;
@@ -95,8 +105,9 @@ p {
         right: 0;
         top: 35px;
         position: absolute;
+        overflow: hidden;
         z-index: 0;
-        width: 775px;
+        width: 745px;
     }
 #boxgroup-2 img {
     display: block;
@@ -127,18 +138,35 @@ p {
         font-weight: 700;
     text-align: center;
     }
-#boxgroup-2 .groupa-1 {
+#boxgroup-2 .group-content .groupa-1 {
     margin-right: 45px;
 }
-#boxgroup-2 .groupa-2 {
+#boxgroup-2 .group-content .groupa-2 {
     margin-right: 40px;
 }
-#boxgroup-2 .groupa-3 {
+#boxgroup-2 .group-content .groupa-3 {
     margin-top: -15px;
 }
-#boxgroup-2 .groupa-4 {
+#boxgroup-2 .group-content .groupa-4 {
     float: right;
     margin-top: -65px;
+}
+#boxgroup-2 .gourp-img .group-text {
+    width: 200px;
+}
+.gourp-img .group-node {
+    padding: 0;
+}
+#boxgroup-2 .gourp-img .groupa-1 {
+    top: -140px;
+    margin-right: 65px;
+}
+#boxgroup-2 .gourp-img .groupa-2 {
+    top: -130px;
+    margin-right: 10px;
+}
+#boxgroup-2 .gourp-img .groupa-3 {
+    width: 230px;
 }
 .mp15 {
     margin-bottom: 15px;
@@ -165,7 +193,7 @@ p {
     }
     #boxgroup-3 .group-img {
         left: 0;
-        top: -35px;
+        top: 0;
         position: absolute;
         width: 100%;
         z-index: 0;
@@ -175,16 +203,16 @@ p {
     width: 100%;
     z-index: 1;
 }
-    #boxgroup-3 .group-bg .box-text {
+    #boxgroup-3 .box-text {
         padding: 45px 0;
         position: relative;
-        width: 630px;
+        width: 550px;
         z-index: 10;
     }
-        #boxgroup-3 .group-bg .description {
+        #boxgroup-3 .box-text .description {
             font-style: italic;
-            padding: 30px 0;
-            width: 495px;
+            margin-bottom: 30px;
+            width: 550px;
         }
         #boxgroup-3 .box-text .desl {
             background: url(../images/nghiencuu/bl.png) no-repeat left top;
@@ -204,7 +232,7 @@ p {
     width: 100%;
     z-index: 10;
 }
-.box-group .wrapper-in {
+/*.box-group .wrapper-in {
     background: url(../images/nghiencuu/box-top.png) no-repeat left top;
     margin-top: -86px;
     float: left;
@@ -221,7 +249,7 @@ p {
 }
 #boxgroup-3 .group-text {
     padding-bottom: 20px;
-}
+}*/
 #boxgroup-3 .group-text h6 {
     background: url(../images/nghiencuu/titbg.png) no-repeat right top;
     color: #fff;
@@ -265,36 +293,69 @@ p {
 .group-b {
     background-color: #fff;
     position: relative;
-    padding-bottom: 30px;
     width: 100%;
+}
+    .group-b .wrapper-in {
+        padding: 50px 0 40px;
+    overflow: hidden;
+    width: 100%;
+    }
+#boxgroup-3 .group-b h5 {
+    float: left;
+    padding-right: 85px;
+}
+#boxgroup-3 .group-b .box-text {
+    background: url(../images/nghiencuu/line.png) repeat-y left top;
+    font-size: 16px;
+    line-height: 24px;
+    overflow: hidden;
+    padding: 0 0 0 15px;
+    margin-top: 30px;
+    width: 470px;
 }
 /*==================*/
 #boxgroup-4 .group-a {
     background: url(../images/nghiencuu/bgm-4.jpg) no-repeat right bottom;
-    min-height: 524px;
 }
 #boxgroup-4 .box-text {
-    padding: 25px 0;
+    color: #7d7d7d;
+        font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    min-height: 741px;
+    padding-top: 30px;
+    position: relative;
     width: 670px;
 }
-    #boxgroup-4 .box-text h5 {
-        color: #0065b3;
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 30px;
-        font-weight: 400;
-        line-height: 42px;
-        padding-left: 20px;
-        margin-bottom: 10px;
+    #boxgroup-4 .box-text ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
+        #boxgroup-4 .box-text ul li {
+            padding-bottom: 10px;
+        }
+    #boxgroup-4 .box-text strong {
+        color: #3e3e3e;
+        font-weight: 700;
+    }
+    #boxgroup-4 .box-text h5 {
+        color: #00754f;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 30px;
+        margin-bottom: 5px;
+    }
+#boxgroup-4 .box-img {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
 #boxgroup-4 .ml105 {
     padding-left: 105px;
 }
 #boxgroup-4 .ml120 {
     padding-left: 120px;
-}
-#boxgroup-4 .box-img {
-    margin-bottom: 20px;
-    margin-left: 105px;
 }
 #boxgroup-4 .description {
     color: #3e3e3e;
@@ -368,3 +429,21 @@ p {
     width: 100%;
     position: absolute;
 }*/
+
+#boxgroup-5 {
+    background: url(../images/nghiencuu/bgm-2b.jpg) no-repeat left center;
+    background-size: cover;
+    min-height: 490px;
+}
+#boxgroup-5 .box-text {
+    color: #583800;
+    font-size: 16px;
+    line-height: 24px;
+    overflow: hidden;
+    padding-top: 90px;
+    width: 100%;
+}
+    #boxgroup-5 .box-wrap {
+        float: right;
+        width: 460px;
+    }
