@@ -32,6 +32,7 @@
                     </div>
                 </div>
             </div>
+            <div class="clr"></div>
         </div>
     </div>
     <div id="boxgroup-2" class="full-cover fade-it  effect-it">
@@ -143,6 +144,8 @@
                         <li>
                             <h5>Công ty chịu trách nhiệm sản phẩm và phân phối</h5>
                             <p><strong>Công ty Cổ phần Dược phẩm VinaCare</strong></p>
+                            <div class="logoa">
+                                <img src="assets/images/nghiencuu/logoa.png" alt=""/></div>
                         </li>
                     </ul>
                     <div class="box-img"><img src="assets/images/nghiencuu/imgbox.png" alt=""/></div>

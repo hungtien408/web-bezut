@@ -4,8 +4,9 @@
 }
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 300;
+    line-height: 26px;
 }
 .clr {
     clear: both;
@@ -44,6 +45,7 @@ body {
 }
 .pl140 {
     padding-left: 140px;
+    padding-bottom: 30px;
 }
 .box-head h5 {
     color: #9a7b3d;
@@ -91,11 +93,9 @@ p {
 #boxgroup-2 {
     background-image: url(../images/nghiencuu/bgm-2.jpg);
     color: #fff;
-    font-size: 16px;
-    line-height: 24px;
 }
     #boxgroup-2 .box-text {
-        padding-top: 300px;
+        padding-top: 320px;
         padding-left: 70px;
         position: relative;
         width: 685px;
@@ -134,7 +134,7 @@ p {
     text-align: center;
 }
     .group-node .group-text h6 {
-        font-size: 16px;
+        font-size: 17px;
         font-weight: 700;
     text-align: center;
     }
@@ -174,8 +174,6 @@ p {
 /*========================*/
 #boxgroup-3 {
         background-image: url(../images/nghiencuu/bgm-3.jpg);
-    font-size: 16px;
-    line-height: 30px;
     position: relative;
     z-index: 3;
 }
@@ -306,8 +304,6 @@ p {
 }
 #boxgroup-3 .group-b .box-text {
     background: url(../images/nghiencuu/line.png) repeat-y left top;
-    font-size: 16px;
-    line-height: 24px;
     overflow: hidden;
     padding: 0 0 0 15px;
     margin-top: 30px;
@@ -320,8 +316,6 @@ p {
 #boxgroup-4 .box-text {
     color: #7d7d7d;
         font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 14px;
-    line-height: 24px;
     min-height: 741px;
     padding-top: 30px;
     position: relative;
@@ -333,7 +327,13 @@ p {
         margin: 0;
     }
         #boxgroup-4 .box-text ul li {
-            padding-bottom: 10px;
+            padding: 5px 0 10px;
+            position: relative;
+        }
+        #boxgroup-4 .box-text ul .logoa {
+            left: 450px;
+            top: 0;
+            position: absolute;
         }
     #boxgroup-4 .box-text strong {
         color: #3e3e3e;
@@ -362,7 +362,6 @@ p {
         font-family: 'Open Sans', Arial, sans-serif;
     font-weight: normal;
     font-style: italic;
-    line-height: 24px;
 }
     #boxgroup-4 .description h6 {
         color: #e50000;
@@ -437,8 +436,6 @@ p {
 }
 #boxgroup-5 .box-text {
     color: #583800;
-    font-size: 16px;
-    line-height: 24px;
     overflow: hidden;
     padding-top: 90px;
     width: 100%;
