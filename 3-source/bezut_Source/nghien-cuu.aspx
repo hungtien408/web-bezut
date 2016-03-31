@@ -148,9 +148,12 @@
                                 <img src="assets/images/nghiencuu/logoa.png" alt=""/></div>
                         </li>
                     </ul>
-                    <div class="box-img"><img src="assets/images/nghiencuu/imgbox.png" alt=""/></div>
+                    <%--<div class="box-img"><img src="assets/images/nghiencuu/imgbox.png" alt=""/></div>--%>
                     
                 </div>
+            </div>
+            <div class="group-imga">
+                <img src="assets/images/nghiencuu/bgm-42.jpg" alt=""/>
             </div>
         </div>
         <div id="footer">

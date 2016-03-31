@@ -8,6 +8,13 @@ body {
     font-weight: 300;
     line-height: 24px;
 }
+#wrapper {
+    left: 0;
+    top: 0;
+    position: absolute;
+    min-width: 1170px;
+    width: 100%;
+}
 .clr {
     clear: both;
 }
@@ -29,7 +36,7 @@ body {
     line-height: 28px;
 }
 .row {
-    margin: 0 -15px;
+    margin: 0;
 }
     .row .col-xs-6 {
         float: left;
@@ -82,6 +89,7 @@ p {
 #boxgroup-1 {
     background-image: url(../images/nghiencuu/bgm-1.jpg);
     background-position: center top;
+    font-weight: 500;
 }
 .description {
     text-align: justify;
@@ -192,7 +200,7 @@ p {
     }
     #boxgroup-3 .group-img {
         left: 0;
-        top: 0;
+        top: 95px;
         position: absolute;
         width: 100%;
         z-index: 0;
@@ -312,12 +320,18 @@ p {
 }
 /*==================*/
 #boxgroup-4 .group-a {
-    background: url(../images/nghiencuu/bgm-4.jpg) no-repeat right bottom;
+    /*background: url(../images/nghiencuu/bgm-42.jpg) no-repeat right bottom;*/
+    position: relative;
+    width: 100%;
 }
+    #boxgroup-4 .group-a > .container {
+        position: relative;
+        z-index: 10;
+    }
 #boxgroup-4 .box-text {
     color: #7d7d7d;
         font-family: 'Open Sans', Arial, sans-serif;
-    min-height: 741px;
+    min-height: 783px;
     padding-top: 30px;
     position: relative;
     width: 670px;
@@ -352,6 +366,17 @@ p {
     left: 0;
     position: absolute;
 }
+#boxgroup-4 .group-imga {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+    #boxgroup-4 .group-imga img {
+        display: block;
+        width: 100%;
+    }
 #boxgroup-4 .ml105 {
     padding-left: 105px;
 }
@@ -434,6 +459,7 @@ p {
     background: url(../images/nghiencuu/bgm-2b.jpg) no-repeat left center;
     background-size: cover;
     min-height: 490px;
+    font-weight: 500;
 }
 #boxgroup-5 .box-text {
     color: #583800;
