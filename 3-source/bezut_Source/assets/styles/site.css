@@ -865,8 +865,10 @@ hr
     color: #fff;
     display: block;
     font-size: 16px;
+    font-weight: 600;
     line-height: 20px;
     padding: 10px 20px;
+    font-family: "Times New Roman",Times,serif;
 }
 #colAside .news-box .news-name a:hover, #colAside .news-box:hover .news-name a
 {
@@ -901,6 +903,7 @@ hr
     font-weight: 700;
     line-height: 20px;
     padding: 10px 10px 10px 20px;
+    font-family: "Times New Roman",Times,serif;
 }
 .list-news li a:hover
 {
@@ -940,6 +943,7 @@ hr
     /*font-weight: 800;*/
     font-weight: 700;
     line-height: 32px;
+    font-family: "Times New Roman",Times,serif;
 }
 .headno .title
 {
@@ -1002,7 +1006,7 @@ hr
     /*color: #464646;*/
     color: #282828;
     font-family: Arial;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 20px;
     overflow: hidden;
     padding: 25px 0 40px;
@@ -1026,19 +1030,21 @@ hr
     bottom: 0;
     color: #fff;
     display: block;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 600;
     line-height: 22px;
     left: 0;
     right: 0;
     position: absolute;
     padding: 10px;
     z-index: 10;
+    font-family: "Times New Roman",Times,serif;
 }
 .section-box .description
 {
     padding: 10px 0;
     text-align:justify;
-    font-weight: 600;
+    /*font-weight: 600;*/
     width: 100%;
 }
 .more-all
@@ -1104,6 +1110,7 @@ hr
     font-weight: 700;
     line-height: 20px;
     padding-bottom: 5px;
+    font-family: "Times New Roman",Times,serif;
 }
 .section-list .section-name a:hover
 {
@@ -1139,6 +1146,7 @@ hr
     font-weight: 600;
     line-height: 20px;
     padding: 5px 0;
+    font-family: "Times New Roman",Times,serif;
 }
 .box-news:hover .section-name a, .box-news .section-name a:hover
 {
@@ -1193,7 +1201,8 @@ hr
 {
     /*color: #464646;*/
     color: #282828;
-    font-family: Arial;
+    /*font-family: Arial;*/
+    font-family: "Times New Roman",Times,serif;
     clear: both;
     font-size: 15px;
     line-height: 28px;
@@ -1207,6 +1216,7 @@ hr
     font-weight: 600;
     line-height: 24px;
     margin-bottom: 10px;
+    font-family: "Times New Roman",Times,serif;
 }
 /*==================================================================================*/
 #footer
@@ -1401,11 +1411,12 @@ hr
     font-weight: 700;
     line-height: 20px;
     padding: 10px 0;
+    font-family: "Times New Roman",Times,serif;
 }
 .product-box .description
 {
     overflow: hidden;
-    font-weight: 600;
+    /*font-weight: 600;*/
 }
 .pro-tb .product-name
 {
@@ -1444,7 +1455,7 @@ hr
 .news-big
 {
     color: #464646;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 24px;
     overflow: hidden;
     padding: 30px 0 25px;
@@ -1472,12 +1483,13 @@ hr
     font-size: 22px;
     font-weight: 600;
     line-height: 30px;
+    font-family: "Times New Roman",Times,serif;
 }
 .news-big  .description
 {
     margin: 10px 0;
     min-height: 105px;
-    font-weight: 600;
+    /*font-weight: 600;*/
     width: 100%;
 }
 .more-details
@@ -1565,7 +1577,7 @@ hr
     color: #464646;
     font-size: 13px;
     line-height: 22px;
-    font-weight: 600;
+    /*font-weight: 600;*/
     overflow: hidden;
     padding: 12px 0;
     width: 100%;
@@ -1594,6 +1606,7 @@ hr
     font-weight: 700;
     line-height: 20px;
     padding-bottom: 10px;
+    font-family: "Times New Roman",Times,serif;
 }
 .news-lbox:hover .news-name a, .news-lbox .news-name a:hover
 {
