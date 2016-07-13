@@ -69,157 +69,6 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <!--section 1-->
-    <div class="head lineh">
-        <h2 class="title-2">
-            tin tức</h2>
-        <%--<div class="head-list">
-            <a href="#">Tin Y tế tổng hợp</a> <a href="#">Sự kiện BEZUT</a> <a href="#">Tin giải
-                trí</a>
-        </div>--%>
-        <asp:ListView ID="lstDanhMucTinTuc" runat="server" DataSourceID="odsDanhMucTinTuc"
-            EnableModelValidation="True">
-            <ItemTemplate>
-                <a href='<%# progressTitle(Eval("ArticleCategoryName")) + "-tci-" + Eval("ParentID") + "-tri-" + Eval("ArticleCategoryID") + ".aspx" %>'>
-                    <%# Eval("ArticleCategoryName")%></a>
-            </ItemTemplate>
-            <LayoutTemplate>
-                <div class="head-list">
-                    <span runat="server" id="itemPlaceholder" />
-                </div>
-            </LayoutTemplate>
-        </asp:ListView>
-        <asp:ObjectDataSource ID="odsDanhMucTinTuc" runat="server" SelectMethod="ArticleCategorySelectAll"
-            TypeName="TLLib.ArticleCategory">
-            <SelectParameters>
-                <asp:Parameter DefaultValue="1" Name="parentID" Type="Int32" />
-                <asp:Parameter DefaultValue="1" Name="increaseLevelCount" Type="Int32" />
-                <asp:Parameter Name="IsShowOnMenu" Type="String" />
-                <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
-            </SelectParameters>
-        </asp:ObjectDataSource>
-    </div>
-    <div class="wrap-section">
-        <%--<div class="section-box">
-            <a href="#" class="section-img">
-                <img src="assets/images/news-img-1.jpg" alt="" />
-                <span class="section-name">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</span>
-            </a>
-            <div class="description">
-                Giảm ho an toàn cho trẻ em là vấn đề luôn được các mẹ quan tâm vì khi thời tiết
-                trở lạnh, hầu hết trẻ em đều rất dễ mắc phải chứng ho khan kéo dài. Cha mẹ khi thấy
-                con bị ho thường sử dụng thuốc...</div>
-        </div>
-        <ul class="section-list">
-            <li><a class="section-img" href="#">
-                <img src="assets/images/news-img-1.jpg" alt="" /></a>
-                <div class="section-content">
-                    <h3 class="section-name">
-                        <a href="#">Không nên coi thường chứng ho ở trẻ</a></h3>
-                    <div class="description">
-                        Những cơn ho dai dẳng kéo dài luôn là nỗi ám ảnh...</div>
-                </div>
-            </li>
-            <li><a class="section-img" href="#">
-                <img src="assets/images/news-img-1.jpg" alt="" /></a>
-                <div class="section-content">
-                    <h3 class="section-name">
-                        <a href="#">Không nên coi thường chứng ho ở trẻ</a></h3>
-                    <div class="description">
-                        Những cơn ho dai dẳng kéo dài luôn là nỗi ám ảnh...</div>
-                </div>
-            </li>
-            <li><a class="section-img" href="#">
-                <img src="assets/images/news-img-1.jpg" alt="" /></a>
-                <div class="section-content">
-                    <h3 class="section-name">
-                        <a href="#">Không nên coi thường chứng ho ở trẻ</a></h3>
-                    <div class="description">
-                        Những cơn ho dai dẳng kéo dài luôn là nỗi ám ảnh...</div>
-                </div>
-            </li>
-        </ul>--%>
-        <asp:ListView ID="lstTinTuc" runat="server" DataSourceID="odsTinTuc" EnableModelValidation="True">
-            <ItemTemplate>
-                <div class="section-box">
-                    <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>'
-                        class="section-img">
-                        <img id="Img1" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/article/" + Eval("ImageName") : "~/assets/images/news-img-1.jpg" %>'
-                            runat="server" />
-                        <span class="section-name">
-                            <%# Eval("ArticleTitle") %></span> </a>
-                    <div class="description">
-                        <%# TLLib.Common.SplitSummary(Eval("Description").ToString(), 280) %></div>
-                </div>
-                <asp:ListView ID="lstListTinTuc" runat="server" DataSourceID="odsListTinTuc" EnableModelValidation="True">
-                    <ItemTemplate>
-                        <li><a class="section-img" href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>'>
-                            <img id="Img2" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/article/" + Eval("ImageName") : "~/assets/images/news-img-1.jpg" %>'
-                                runat="server" /></a>
-                            <div class="section-content">
-                                <h3 class="section-name">
-                                    <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>'>
-                                        <%# Eval("ArticleTitle") %></a></h3>
-                                <div class="description">
-                                    <%# TLLib.Common.SplitSummary(Eval("Description").ToString(), 50) %></div>
-                            </div>
-                        </li>
-                    </ItemTemplate>
-                    <LayoutTemplate>
-                        <ul class="section-list">
-                            <li runat="server" id="itemPlaceholder"></li>
-                        </ul>
-                    </LayoutTemplate>
-                </asp:ListView>
-                <asp:ObjectDataSource ID="odsListTinTuc" runat="server" SelectMethod="ArticleSelectAll"
-                    TypeName="TLLib.Article">
-                    <SelectParameters>
-                        <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
-                        <asp:Parameter DefaultValue="3" Name="EndRowIndex" Type="String" />
-                        <asp:Parameter Name="Keyword" Type="String" />
-                        <asp:Parameter Name="ArticleTitle" Type="String" />
-                        <asp:Parameter Name="Description" Type="String" />
-                        <asp:Parameter DefaultValue="1" Name="ArticleCategoryID" Type="String" />
-                        <asp:Parameter Name="Tag" Type="String" />
-                        <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
-                        <asp:Parameter Name="IsHot" Type="String" />
-                        <asp:Parameter DefaultValue="True" Name="IsNew" Type="String" />
-                        <asp:Parameter Name="FromDate" Type="String" />
-                        <asp:Parameter Name="ToDate" Type="String" />
-                        <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
-                        <asp:Parameter Name="Priority" Type="String" />
-                        <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
-                    </SelectParameters>
-                </asp:ObjectDataSource>
-            </ItemTemplate>
-            <LayoutTemplate>
-                <span runat="server" id="itemPlaceholder" />
-            </LayoutTemplate>
-        </asp:ListView>
-        <asp:ObjectDataSource ID="odsTinTuc" runat="server" SelectMethod="ArticleSelectAll"
-            TypeName="TLLib.Article">
-            <SelectParameters>
-                <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
-                <asp:Parameter DefaultValue="1" Name="EndRowIndex" Type="String" />
-                <asp:Parameter Name="Keyword" Type="String" />
-                <asp:Parameter Name="ArticleTitle" Type="String" />
-                <asp:Parameter Name="Description" Type="String" />
-                <asp:Parameter DefaultValue="1" Name="ArticleCategoryID" Type="String" />
-                <asp:Parameter Name="Tag" Type="String" />
-                <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
-                <asp:Parameter DefaultValue="True" Name="IsHot" Type="String" />
-                <asp:Parameter Name="IsNew" Type="String" />
-                <asp:Parameter Name="FromDate" Type="String" />
-                <asp:Parameter Name="ToDate" Type="String" />
-                <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
-                <asp:Parameter Name="Priority" Type="String" />
-                <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
-            </SelectParameters>
-        </asp:ObjectDataSource>
-        <div class="more-all">
-            <a href="tin-tuc.aspx"><span>Xem tất cả</span></a>
-        </div>
-    </div>
     <!--section 2-->
     <div class="head lineh">
         <h2 class="title-2">
@@ -490,6 +339,157 @@
         </asp:ObjectDataSource>
         <div class="more-all">
             <a href="kien-thuc-benh-hoc.aspx"><span>Xem tất cả</span></a>
+        </div>
+    </div>
+    <!--section 1-->
+    <div class="head lineh">
+        <h2 class="title-2">
+            tin tức</h2>
+        <%--<div class="head-list">
+            <a href="#">Tin Y tế tổng hợp</a> <a href="#">Sự kiện BEZUT</a> <a href="#">Tin giải
+                trí</a>
+        </div>--%>
+        <asp:ListView ID="lstDanhMucTinTuc" runat="server" DataSourceID="odsDanhMucTinTuc"
+            EnableModelValidation="True">
+            <ItemTemplate>
+                <a href='<%# progressTitle(Eval("ArticleCategoryName")) + "-tci-" + Eval("ParentID") + "-tri-" + Eval("ArticleCategoryID") + ".aspx" %>'>
+                    <%# Eval("ArticleCategoryName")%></a>
+            </ItemTemplate>
+            <LayoutTemplate>
+                <div class="head-list">
+                    <span runat="server" id="itemPlaceholder" />
+                </div>
+            </LayoutTemplate>
+        </asp:ListView>
+        <asp:ObjectDataSource ID="odsDanhMucTinTuc" runat="server" SelectMethod="ArticleCategorySelectAll"
+            TypeName="TLLib.ArticleCategory">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="1" Name="parentID" Type="Int32" />
+                <asp:Parameter DefaultValue="1" Name="increaseLevelCount" Type="Int32" />
+                <asp:Parameter Name="IsShowOnMenu" Type="String" />
+                <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
+            </SelectParameters>
+        </asp:ObjectDataSource>
+    </div>
+    <div class="wrap-section">
+        <%--<div class="section-box">
+            <a href="#" class="section-img">
+                <img src="assets/images/news-img-1.jpg" alt="" />
+                <span class="section-name">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</span>
+            </a>
+            <div class="description">
+                Giảm ho an toàn cho trẻ em là vấn đề luôn được các mẹ quan tâm vì khi thời tiết
+                trở lạnh, hầu hết trẻ em đều rất dễ mắc phải chứng ho khan kéo dài. Cha mẹ khi thấy
+                con bị ho thường sử dụng thuốc...</div>
+        </div>
+        <ul class="section-list">
+            <li><a class="section-img" href="#">
+                <img src="assets/images/news-img-1.jpg" alt="" /></a>
+                <div class="section-content">
+                    <h3 class="section-name">
+                        <a href="#">Không nên coi thường chứng ho ở trẻ</a></h3>
+                    <div class="description">
+                        Những cơn ho dai dẳng kéo dài luôn là nỗi ám ảnh...</div>
+                </div>
+            </li>
+            <li><a class="section-img" href="#">
+                <img src="assets/images/news-img-1.jpg" alt="" /></a>
+                <div class="section-content">
+                    <h3 class="section-name">
+                        <a href="#">Không nên coi thường chứng ho ở trẻ</a></h3>
+                    <div class="description">
+                        Những cơn ho dai dẳng kéo dài luôn là nỗi ám ảnh...</div>
+                </div>
+            </li>
+            <li><a class="section-img" href="#">
+                <img src="assets/images/news-img-1.jpg" alt="" /></a>
+                <div class="section-content">
+                    <h3 class="section-name">
+                        <a href="#">Không nên coi thường chứng ho ở trẻ</a></h3>
+                    <div class="description">
+                        Những cơn ho dai dẳng kéo dài luôn là nỗi ám ảnh...</div>
+                </div>
+            </li>
+        </ul>--%>
+        <asp:ListView ID="lstTinTuc" runat="server" DataSourceID="odsTinTuc" EnableModelValidation="True">
+            <ItemTemplate>
+                <div class="section-box">
+                    <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>'
+                        class="section-img">
+                        <img id="Img1" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/article/" + Eval("ImageName") : "~/assets/images/news-img-1.jpg" %>'
+                            runat="server" />
+                        <span class="section-name">
+                            <%# Eval("ArticleTitle") %></span> </a>
+                    <div class="description">
+                        <%# TLLib.Common.SplitSummary(Eval("Description").ToString(), 280) %></div>
+                </div>
+                <asp:ListView ID="lstListTinTuc" runat="server" DataSourceID="odsListTinTuc" EnableModelValidation="True">
+                    <ItemTemplate>
+                        <li><a class="section-img" href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>'>
+                            <img id="Img2" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/article/" + Eval("ImageName") : "~/assets/images/news-img-1.jpg" %>'
+                                runat="server" /></a>
+                            <div class="section-content">
+                                <h3 class="section-name">
+                                    <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>'>
+                                        <%# Eval("ArticleTitle") %></a></h3>
+                                <div class="description">
+                                    <%# TLLib.Common.SplitSummary(Eval("Description").ToString(), 50) %></div>
+                            </div>
+                        </li>
+                    </ItemTemplate>
+                    <LayoutTemplate>
+                        <ul class="section-list">
+                            <li runat="server" id="itemPlaceholder"></li>
+                        </ul>
+                    </LayoutTemplate>
+                </asp:ListView>
+                <asp:ObjectDataSource ID="odsListTinTuc" runat="server" SelectMethod="ArticleSelectAll"
+                    TypeName="TLLib.Article">
+                    <SelectParameters>
+                        <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
+                        <asp:Parameter DefaultValue="3" Name="EndRowIndex" Type="String" />
+                        <asp:Parameter Name="Keyword" Type="String" />
+                        <asp:Parameter Name="ArticleTitle" Type="String" />
+                        <asp:Parameter Name="Description" Type="String" />
+                        <asp:Parameter DefaultValue="1" Name="ArticleCategoryID" Type="String" />
+                        <asp:Parameter Name="Tag" Type="String" />
+                        <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
+                        <asp:Parameter Name="IsHot" Type="String" />
+                        <asp:Parameter DefaultValue="True" Name="IsNew" Type="String" />
+                        <asp:Parameter Name="FromDate" Type="String" />
+                        <asp:Parameter Name="ToDate" Type="String" />
+                        <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                        <asp:Parameter Name="Priority" Type="String" />
+                        <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                    </SelectParameters>
+                </asp:ObjectDataSource>
+            </ItemTemplate>
+            <LayoutTemplate>
+                <span runat="server" id="itemPlaceholder" />
+            </LayoutTemplate>
+        </asp:ListView>
+        <asp:ObjectDataSource ID="odsTinTuc" runat="server" SelectMethod="ArticleSelectAll"
+            TypeName="TLLib.Article">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
+                <asp:Parameter DefaultValue="1" Name="EndRowIndex" Type="String" />
+                <asp:Parameter Name="Keyword" Type="String" />
+                <asp:Parameter Name="ArticleTitle" Type="String" />
+                <asp:Parameter Name="Description" Type="String" />
+                <asp:Parameter DefaultValue="1" Name="ArticleCategoryID" Type="String" />
+                <asp:Parameter Name="Tag" Type="String" />
+                <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
+                <asp:Parameter DefaultValue="True" Name="IsHot" Type="String" />
+                <asp:Parameter Name="IsNew" Type="String" />
+                <asp:Parameter Name="FromDate" Type="String" />
+                <asp:Parameter Name="ToDate" Type="String" />
+                <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                <asp:Parameter Name="Priority" Type="String" />
+                <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+            </SelectParameters>
+        </asp:ObjectDataSource>
+        <div class="more-all">
+            <a href="tin-tuc.aspx"><span>Xem tất cả</span></a>
         </div>
     </div>
     <!--section4-->
