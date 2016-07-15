@@ -58,8 +58,10 @@
                 <h2 class="title text-uppercase">
                     sản phẩm</h2>
                 <div class="h-link">
-                    <a href='<%# !string.IsNullOrEmpty(Eval("ProductCategoryLink").ToString()) ? Eval("ProductCategoryLink") : progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ParentID") + "-pri-" + Eval("ProductCategoryID") + ".aspx" %>'>
-                        <%# Eval("ProductCategoryName") %></a>
+                    <%--<a href='<%# !string.IsNullOrEmpty(Eval("ProductCategoryLink").ToString()) ? Eval("ProductCategoryLink") : progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ParentID") + "-pri-" + Eval("ProductCategoryID") + ".aspx" %>'>
+                        <%# Eval("ProductCategoryName") %></a>--%>
+                        <a href="nghien-cuu.aspx">
+                                        Nghiên cứu phát triển</a>
                 </div>
                 <div class="link-nc">
                     <a href="nghien-cuu.aspx">Click me</a>
