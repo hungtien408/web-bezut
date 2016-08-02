@@ -25,8 +25,7 @@
                     </div>--%>
                         <div class="description">
                             <p>
-                                Nghiên cứu lý luận của Y học Cổ truyền Phương Đông kết hợp với các thành tựu và
-                                kết quả nghiên cứu của y học hiện đại, cũng như kinh nghiệm sử dụng thảo dược trong
+                                Nghiên cứu lý luận của Y học Cổ truyền Phương Đông kết hợp với kinh nghiệm sử dụng thảo dược trong
                                 điều trị ho của cả hai nền y học Phương Đông và Phương Tây, Công ty Cổ Phần Dược
                                 Phẩm Vinacare phối hợp với các đơn vị nghiên cứu đã cho ra đời bộ sản phẩm HO BEZUT
                                 bao gồm: SIRO HO BEZUT, VIÊN NGẬM HO BEZUT, VIÊN NGẬM HO BEZUT KHÔNG ĐƯỜNG (dành
@@ -62,7 +61,7 @@
                     <div class="description">
                         <p>
                             Y học Cổ truyền Phương Đông đã hình thành từ hàng ngàn năm nay với những kiến thức
-                            phong phú về sử dụng Động – Thực vật trong chữa bệnh. Đối với chứng Ho, Y Học cổ
+                            phong phú về sử dụng thảo dược trong chữa bệnh. Đối với chứng Ho, Y Học cổ
                             truyền Phương Đông đã đúc kết ra những thảo dược sau có tác giảm ho, long đờm cực
                             kỳ hiệu quả: </p>
                     </div>
@@ -116,8 +115,7 @@
                             <h6>
                                 Tinh dầu Quất</h6>
                             <div class="description">
-                                Kích thích hô hấp, giúp long đờm và tống đờm ra ngoài. Theo đông y có tác dụng kiện
-                                tỳ, thông phổi, trừ đờm, trị ho cảm,...</div>
+                                Kiện tỳ, thông phổi, trừ đờm, trị ho cảm,...</div>
                         </div>
                         <div class="clr">
                         </div>
