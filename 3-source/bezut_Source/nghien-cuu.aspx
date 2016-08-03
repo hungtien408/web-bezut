@@ -25,12 +25,13 @@
                     </div>--%>
                         <div class="description">
                             <p>
-                                Nghiên cứu lý luận của Y học Cổ truyền Phương Đông kết hợp với kinh nghiệm sử dụng thảo dược trong
-                                điều trị ho của cả hai nền y học Phương Đông và Phương Tây, Công ty Cổ Phần Dược
-                                Phẩm Vinacare phối hợp với các đơn vị nghiên cứu đã cho ra đời bộ sản phẩm HO BEZUT
-                                bao gồm: SIRO HO BEZUT, VIÊN NGẬM HO BEZUT, VIÊN NGẬM HO BEZUT KHÔNG ĐƯỜNG (dành
-                                cho người kiêng đường)… là sự kết hợp độc đáo của hai nền y học Phương Đông và Phương
-                                Tây trong sử dụng thảo dược để giảm ho, long đờm cho hiệu quả cao và rất an toàn.</p>
+                                Nghiên cứu lý luận của Y học Cổ truyền Phương Đông kết hợp với kinh nghiệm sử dụng
+                                thảo dược trong điều trị ho của cả hai nền y học Phương Đông và Phương Tây, Công
+                                ty Cổ Phần Dược Phẩm Vinacare phối hợp với các đơn vị nghiên cứu đã cho ra đời bộ
+                                sản phẩm HO BEZUT bao gồm: SIRO HO BEZUT, VIÊN NGẬM HO BEZUT, VIÊN NGẬM HO BEZUT
+                                KHÔNG ĐƯỜNG (dành cho người kiêng đường)… là sự kết hợp độc đáo của hai nền y học
+                                Phương Đông và Phương Tây trong sử dụng thảo dược để giảm ho, long đờm cho hiệu
+                                quả cao và rất an toàn.</p>
                         </div>
                     </div>
                     <div class="col-xs-8">
@@ -38,14 +39,15 @@
                             <img src="assets/images/nghiencuu/titlem1.png" alt="Tìm hiểu trong Y học phương Tây" /></h5>
                         <div class="description pl140">
                             Thường xuân là một loài cây gỗ leo với tên gọi khoa học là Hedera helix, họ Araliaceae
-                            (họ Nhân sâm). Các nghiên cứu công bố gần đây cho thấy sau 7 ngày sử dụng siro chứa
-                            cao lá Thường Xuân 95% bệnh nhân hết các triệu chứng ho rõ rệt. Các phân tích đã
-                            chỉ ra thành phần trong Saponin của cao lá Thường Xuân có chứa α- Hederin, Hederacosid
-                            C có tác dụng chống co thắt, long đờm, chống viêm và kháng khuẩn. Ngày nay, cao
-                            lá Thường Xuân đã và đang được ứng dụng rộng rãi trong điều trị ho và viêm đường
-                            hô hấp tại Châu Âu cũng như nhiều nước trên thế giới. Tuy nhiên, trong lý luận Phương
-                            Đông cần xây dựng công thức phối hợp các loại thảo dược để có hiệu quả cao hơn trong
-                            điều trị ho.
+                            (họ Nhân sâm). Từ thời cổ xưa, Hippocrates, ông tổ của nghề thuốc, đã sử dụng hầu
+                            hết các bộ phận (rễ, lá, quả, hoa,…) của cây thường xuân để chữa bệnh. Các nghiên
+                            cứu công bố gần đây cho thấy sau 7 ngày sử dụng siro chứa cao lá Thường xuân
+                            95% bệnh nhân hết các triệu chứng ho hoặc cải thiện ho rõ rệt. Thành phần saponin:
+                            α – Hederin; Hederacosid C trong lá Thường xuân có tác dụng chống co thắt, long
+                            đờm, chống viêm và kháng khuẩn. Ngày nay, cao lá Thường xuân đã và đang được
+                            ứng dụng rộng rãi trong điều trị ho tại nhiều nước ở Châu Âu cũng như trên
+                            thế giới. Tuy nhiên, người ta thường phối hợp cao lá Thường xuân với các loại
+                            thảo dược khác để nâng cao hiệu quả trong điều trị ho.
                         </div>
                     </div>
                 </div>
@@ -61,9 +63,9 @@
                     <div class="description">
                         <p>
                             Y học Cổ truyền Phương Đông đã hình thành từ hàng ngàn năm nay với những kiến thức
-                            phong phú về sử dụng thảo dược trong chữa bệnh. Đối với chứng Ho, Y Học cổ
-                            truyền Phương Đông đã đúc kết ra những thảo dược sau có tác giảm ho, long đờm cực
-                            kỳ hiệu quả: </p>
+                            phong phú về sử dụng thảo dược trong chữa bệnh. Đối với chứng Ho, Y Học cổ truyền
+                            Phương Đông đã đúc kết ra những thảo dược sau có tác giảm ho, long đờm cực kỳ hiệu
+                            quả: </p>
                     </div>
                 </div>
                 <div class="gourp-img">
