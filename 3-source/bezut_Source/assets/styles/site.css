@@ -959,7 +959,7 @@ hr
     font-weight: 700;
     line-height: 36px;
     text-transform: uppercase;
-    font-style: italic;
+    /*font-style: italic;*/
     padding: 0 15px;
 }
 .linenobg .title-2
@@ -976,7 +976,7 @@ hr
     color: #f2f2f2;
     font-size: 14px;
     overflow: hidden;
-    font-style: italic;
+    /*font-style: italic;*/
 }
 .head-list a
 {
@@ -1009,7 +1009,7 @@ hr
     color: #282828;
     font-family: Arial;
     font-size: 14px;
-    font-style: italic;
+    /*font-style: italic;*/
     line-height: 20px;
     overflow: hidden;
     padding: 25px 0 40px;
@@ -1487,7 +1487,7 @@ hr
 {
     display: block;
     font-size: 22px;
-    font-style: italic;
+    /*font-style: italic;*/
     font-weight: 600;
     line-height: 30px;
     font-family: "Times New Roman",Times,serif;
@@ -1498,7 +1498,7 @@ hr
     min-height: 105px;
     /*font-weight: 600;*/
     width: 100%;
-    font-style: italic;
+    /*font-style: italic;*/
 }
 .more-details
 {
@@ -1584,7 +1584,7 @@ hr
 {
     color: #464646;
     font-size: 14px;
-    font-style: italic;
+    /*font-style: italic;*/
     line-height: 22px;
     /*font-weight: 600;*/
     overflow: hidden;
