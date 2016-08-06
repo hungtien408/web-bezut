@@ -477,11 +477,11 @@
                                                     <asp:EditorTool Name="Copy" />
                                                     <asp:EditorTool Name="Cut" />
                                                     <asp:EditorTool Name="Paste" />
-                                                    <asp:EditorTool Name="Bold" />
+                                                    <%--<asp:EditorTool Name="Bold" />
                                                     <asp:EditorTool Name="Italic" />
                                                     <asp:EditorTool Name="Underline" />
                                                     <asp:EditorTool Name="InsertLink" />
-                                                    <asp:EditorTool Name="ForeColor" />
+                                                    <asp:EditorTool Name="ForeColor" />--%>
                                                 </asp:EditorToolGroup>
                                             </Tools>
                                         </asp:RadEditor>
@@ -561,11 +561,11 @@
                                                     <asp:EditorTool Name="Copy" />
                                                     <asp:EditorTool Name="Cut" />
                                                     <asp:EditorTool Name="Paste" />
-                                                    <asp:EditorTool Name="Bold" />
+                                                    <%--<asp:EditorTool Name="Bold" />
                                                     <asp:EditorTool Name="Italic" />
                                                     <asp:EditorTool Name="Underline" />
                                                     <asp:EditorTool Name="InsertLink" />
-                                                    <asp:EditorTool Name="ForeColor" />
+                                                    <asp:EditorTool Name="ForeColor" />--%>
                                                 </asp:EditorToolGroup>
                                             </Tools>
                                         </asp:RadEditor>
