@@ -61,8 +61,9 @@
                 <div class="col-w230 w258">
                     <div class="box-in">
                         <%--<asp:Button ID="Button1" CssClass="button-btn btn-b corner" runat="server" Text="Đặt hàng ngay!" />--%>
-                        <a href="javascript:void(0);" class="button-btn btn-b corner text-center" data-toggle="modal"
-                            data-target="#myModal">Đặt hàng ngay!</a>
+                        <%--<a href="javascript:void(0);" class="button-btn btn-b corner text-center" data-toggle="modal"
+                            data-target="#myModal">Đặt hàng ngay!</a>--%>
+                            <a href="javascript:void(0);" class="button-btn btn-b corner text-center">Đặt hàng ngay!</a>
                     </div>
                 </div>
                 <div class="col-w230 w298">
