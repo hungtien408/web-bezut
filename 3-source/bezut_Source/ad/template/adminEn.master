@@ -253,6 +253,9 @@
                             </asp:RadMenuItem>
                         </Items>
                     </asp:RadMenuItem>
+                    <asp:RadMenuItem runat="server" Text="Thông tin website" PostBack="False" Font-Bold="True"
+                        NavigateUrl="~/ad/bilingual/bezut-infowebsite.aspx">
+                    </asp:RadMenuItem>
                     <asp:RadMenuItem runat="server" Text="Video" PostBack="False" Font-Bold="True"
                         NavigateUrl="~/ad/bilingual/bezut-video.aspx">
                     </asp:RadMenuItem>

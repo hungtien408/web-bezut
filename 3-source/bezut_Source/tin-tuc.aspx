@@ -25,6 +25,22 @@
             <LayoutTemplate>
                 <div class="head-list">
                     <span runat="server" id="itemPlaceholder" />
+                    <asp:ListView ID="lstInfoWebCategory" runat="server" DataSourceID="odsInfoWebCategory"
+                        EnableModelValidation="True">
+                        <ItemTemplate>
+                            <a href="thong-tin-website.aspx">
+                                <%# Eval("ArticleCategoryName")%></a>
+                        </ItemTemplate>
+                        <LayoutTemplate>
+                            <span runat="server" id="itemPlaceholder" />
+                        </LayoutTemplate>
+                    </asp:ListView>
+                    <asp:ObjectDataSource ID="odsInfoWebCategory" runat="server" SelectMethod="ArticleCategorySelectOne"
+                        TypeName="TLLib.ArticleCategory">
+                        <SelectParameters>
+                            <asp:Parameter DefaultValue="16" Name="ArticleCategoryID" Type="String" />
+                        </SelectParameters>
+                    </asp:ObjectDataSource>
                 </div>
             </LayoutTemplate>
         </asp:ListView>
@@ -57,7 +73,8 @@
         EnableModelValidation="True">
         <ItemTemplate>
             <div class="news-big line-bottom">
-                <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>' class="news-img">
+                <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>'
+                    class="news-img">
                     <img alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/article/" + Eval("ImageName") : "~/assets/images/news-img-1.jpg" %>'
                         runat="server" /></a>
                 <div class="news-content">
@@ -67,7 +84,8 @@
                     <div class="description">
                         <%# TLLib.Common.SplitSummary(Eval("Description").ToString(), 260) %></div>
                     <div class="more-details">
-                        <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>'>Xem chi tiết</a></div>
+                        <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>'>
+                            Xem chi tiết</a></div>
                 </div>
             </div>
         </ItemTemplate>
@@ -357,7 +375,8 @@
                 <ItemTemplate>
                     <div class="col-xs-4 element-item">
                         <div class="product-box">
-                            <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>' class="product-img">
+                            <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>'
+                                class="product-img">
                                 <img alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/article/" + Eval("ImageName") : "~/assets/images/news-img-1.jpg" %>'
                                     runat="server" /></a>
                             <div class="product-content">

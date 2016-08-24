@@ -25,6 +25,22 @@
             <LayoutTemplate>
                 <div class="head-list">
                     <span runat="server" id="itemPlaceholder" />
+                    <asp:ListView ID="lstInfoWebCategory" runat="server" DataSourceID="odsInfoWebCategory"
+                        EnableModelValidation="True">
+                        <ItemTemplate>
+                            <a href="thong-tin-website.aspx">
+                                <%# Eval("ArticleCategoryNameEn")%></a>
+                        </ItemTemplate>
+                        <LayoutTemplate>
+                            <span runat="server" id="itemPlaceholder" />
+                        </LayoutTemplate>
+                    </asp:ListView>
+                    <asp:ObjectDataSource ID="odsInfoWebCategory" runat="server" SelectMethod="ArticleCategorySelectOne"
+                        TypeName="TLLib.ArticleCategory">
+                        <SelectParameters>
+                            <asp:Parameter DefaultValue="16" Name="ArticleCategoryID" Type="String" />
+                        </SelectParameters>
+                    </asp:ObjectDataSource>
                 </div>
             </LayoutTemplate>
         </asp:ListView>

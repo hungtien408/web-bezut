@@ -16,10 +16,10 @@
         <div class="col-md-12 col-xs-6">
             <asp:ContentPlaceHolder ID="cphAsideTop" runat="server">
             </asp:ContentPlaceHolder>
-            <div class="adv">
+            <%--<div class="adv">
                 <a href="he-thong-phan-phoi.aspx">
                     <img src="assets/images/images-1.jpg" alt="" /></a>
-            </div>
+            </div>--%>
         </div>
         <div class="col-md-12 col-xs-6">
             <asp:ListView ID="lstVideo" runat="server" DataSourceID="odsVideo" EnableModelValidation="True">

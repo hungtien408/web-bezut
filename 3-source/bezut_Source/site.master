@@ -11,7 +11,8 @@
         rel='stylesheet' type='text/css' />
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&subset=latin,vietnamese'
         rel='stylesheet' type='text/css' />
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,vietnamese'
+        rel='stylesheet' type='text/css' />
     <link href="assets/styles/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/styles/font-awesome-ie7.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -82,11 +83,8 @@
                         <img src="assets/images/logos.png" alt="logo" /></a></div>--%>
                 <div class="header-right">
                     <div class="button-menu mobile-showhide">
-                        <a class="panel-left" href="#menumobile">
-                            <span class="icon-bar">bar</span>
-                            <span class="icon-bar">bar</span>
-                            <span class="icon-bar">bar</span>
-                        </a>
+                        <a class="panel-left" href="#menumobile"><span class="icon-bar">bar</span> <span
+                            class="icon-bar">bar</span> <span class="icon-bar">bar</span> </a>
                     </div>
                     <a href="#searchbox" class="finda mobile-showhide">search</a>
                     <ul id="menu" class="desktop-showhide">
@@ -103,8 +101,7 @@
                                 </ItemTemplate>
                                 <LayoutTemplate>
                                     <ul>
-                                        <li><a href="nghien-cuu.aspx">
-                                        Nghiên cứu phát triển</a></li>
+                                        <li><a href="nghien-cuu.aspx">Nghiên cứu phát triển</a></li>
                                         <span runat="server" id="itemPlaceholder" />
                                     </ul>
                                 </LayoutTemplate>
@@ -141,27 +138,30 @@
                         <li><a href="kien-thuc-benh-hoc.aspx">Sức khoẻ tổng hợp</a></li>
                         <li><a href="tu-van.aspx">Tư vấn chuyên gia</a></li>
                         <li><a href="tin-tuc.aspx">Tin tức</a></li>
-                        <li><a href="he-thong-phan-phoi.aspx">Hệ thống phân phối</a></li>
+                        <%--<li><a href="he-thong-phan-phoi.aspx">Hệ thống phân phối</a></li>--%>
                         <li class="last"><a href="lien-he.aspx">Liên hệ</a></li>
                     </ul>
                     <div class="header-bottom">
                         <div id="searchbox" class="search-form">
                             <asp:Button ID="btnSearch" CssClass="search-btn" runat="server" OnClick="btnSearch_Click" />
                             <div class="search-input">
-                                <asp:TextBox ID="txtSearch" CssClass="search-text" runat="server" Text="Tìm kiếm" onfocus="if(this.value=='Tìm kiếm...')this.value=''" onblur="if(this.value=='')this.value='Tìm kiếm...'"></asp:TextBox>
+                                <asp:TextBox ID="txtSearch" CssClass="search-text" runat="server" Text="Tìm kiếm"
+                                    onfocus="if(this.value=='Tìm kiếm...')this.value=''" onblur="if(this.value=='')this.value='Tìm kiếm...'"></asp:TextBox>
                             </div>
                         </div>
                         <div class="share desktop-showhide">
                             Follow me on <a href="https://www.facebook.com/bacsibezut">
-                                <img src="assets/images/fa-1.png" alt="" /></a> 
-                                <%--<a href="#"><img src="assets/images/fa-2.png" alt="" /></a> <a href="#">
+                                <img src="assets/images/fa-1.png" alt="" /></a>
+                            <%--<a href="#"><img src="assets/images/fa-2.png" alt="" /></a> <a href="#">
                                         <img src="assets/images/fa-3.png" alt="" /></a>--%>
                         </div>
                         <div class="hotline desktop-showhide">
                             Tổng đài CSKH: <strong>091 926 3399</strong></div>
-                        <div class="clr"></div>
+                        <div class="clr">
+                        </div>
                     </div>
-                    <div class="clr"></div>
+                    <div class="clr">
+                    </div>
                 </div>
             </div>
             <div class="header-bgr desktop-showhide">
@@ -190,8 +190,9 @@
             <div class="footer-wrapper">
                 <div class="container">
                     <div class="footer-box mobi480h">
-                        <div class="footer-logo"><a href="http://www.vinacare.vn/" runat="server">
-                            <img src="assets/images/logo-footer.png" alt=""/></a></div>
+                        <div class="footer-logo">
+                            <a href="http://www.vinacare.vn/" runat="server">
+                                <img src="assets/images/logo-footer.png" alt="" /></a></div>
                         <div class="dangky">
                             <img src="assets/images/dangky.png" alt="" /></div>
                     </div>
@@ -226,16 +227,9 @@
                                     </SelectParameters>
                                 </asp:ObjectDataSource>
                             </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12">
+                            <%--<div class="col-md-4 col-sm-6 col-xs-12">
                                 <h2>
                                     kiến thức bệnh học</h2>
-                                <%--<ul class="list-footer">
-                                    <li><a href="#">Bệnh hô hấp <span class="icona-left icon-chevron-right"></span></a>
-                                    </li>
-                                    <li><a href="#">Bệnh tiêu hóa<span class="icona-left icon-chevron-right"></span></a></li>
-                                    <li><a href="#">Biếng ăn<span class="icona-left icon-chevron-right"></span></a></li>
-                                    <li><a href="#">Còi xương, chậm lớn<span class="icona-left icon-chevron-right"></span></a></li>
-                                </ul>--%>
                                 <asp:ListView ID="lstDanhMucKienThucBenhHoc" runat="server" DataSourceID="odsDanhMucKienThucBenhHoc"
                                     EnableModelValidation="True">
                                     <ItemTemplate>
@@ -257,6 +251,41 @@
                                         <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
                                     </SelectParameters>
                                 </asp:ObjectDataSource>
+                            </div>--%>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <h2>
+                                    Thông tin website</h2>
+                                <asp:ListView ID="lstInfoWebsite" runat="server" DataSourceID="odsInfoWebsite" EnableModelValidation="True">
+                                    <ItemTemplate>
+                                        <li><a href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>'>
+                                            <%# Eval("ArticleTitle")%><span class="icona-left icon-chevron-right"></span></a></li>
+                                    </ItemTemplate>
+                                    <LayoutTemplate>
+                                        <ul class="list-footer">
+                                            <span runat="server" id="itemPlaceholder" />
+                                        </ul>
+                                    </LayoutTemplate>
+                                </asp:ListView>
+                                <asp:ObjectDataSource ID="odsInfoWebsite" runat="server" SelectMethod="ArticleSelectAll"
+                                    TypeName="TLLib.Article">
+                                    <SelectParameters>
+                                        <asp:Parameter Name="StartRowIndex" Type="String" />
+                                        <asp:Parameter Name="EndRowIndex" Type="String" />
+                                        <asp:Parameter Name="Keyword" Type="String" />
+                                        <asp:Parameter Name="ArticleTitle" Type="String" />
+                                        <asp:Parameter Name="Description" Type="String" />
+                                        <asp:Parameter DefaultValue="16" Name="ArticleCategoryID" Type="String" />
+                                        <asp:Parameter Name="Tag" Type="String" />
+                                        <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+                                        <asp:Parameter Name="IsHot" Type="String" />
+                                        <asp:Parameter Name="IsNew" Type="String" />
+                                        <asp:Parameter Name="FromDate" Type="String" />
+                                        <asp:Parameter Name="ToDate" Type="String" />
+                                        <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                                        <asp:Parameter Name="Priority" Type="String" />
+                                        <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                                    </SelectParameters>
+                                </asp:ObjectDataSource>
                             </div>
                             <div class="col-md-4 col-sm-12 col-xs-12">
                                 <h2>
@@ -266,13 +295,16 @@
                                     <li class="add-2"><span>Điện thoại: (04) 3664 9263</span></li>
                                     <li class="add-3"><span>Fax: (04) 3664 9265</span></li>
                                     <li class="add-5"><span>Email: <a href="mailto:vinacarepharma@gmail.com">vinacarepharma@gmail.com</a></span></li>
+                                    <li>Mã số doanh nghiệp : 0102302539 đăng ký ngày 07 tháng 07 năm 2015 tại Sở Kế hoạch
+                                        và đầu tư Thành phố Hà Nội.</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="footer-box mobi480s">
-                        <div class="footer-logo"><a id="A1" href="http://www.vinacare.vn/" runat="server">
-                            <img src="assets/images/logo-footer.png" alt=""/></a></div>
+                        <div class="footer-logo">
+                            <a id="A1" href="http://www.vinacare.vn/" runat="server">
+                                <img src="assets/images/logo-footer.png" alt="" /></a></div>
                         <div class="dangky">
                             <img src="assets/images/dangky.png" alt="" /></div>
                     </div>
@@ -281,14 +313,14 @@
             <div class="copyright">
                 <div class="container">
                     <div class="col-md-6">
-                    &copy; 2015 BEZUT. All rights reserved | <a href="http://www.tranlegroup.com" target="_blank">
-                        Thiet Ke Web</a> <a href="http://www.tranlegroup.com" target="_blank">Tran Le</a>
+                        &copy; 2015 BEZUT. All rights reserved | <a href="http://www.tranlegroup.com" target="_blank">
+                            Thiet Ke Web</a> <a href="http://www.tranlegroup.com" target="_blank">Tran Le</a>
                     </div>
                     <div class="col-md-6">
-                      Đang truy cập:
-                      <%=Application["visitors_online"].ToString()%> | 
-                      Tổng cộng:
-                      <%=Application["TatCa"].ToString()%>
+                        Đang truy cập:
+                        <%=Application["visitors_online"].ToString()%>
+                        | Tổng cộng:
+                        <%=Application["TatCa"].ToString()%>
                     </div>
                 </div>
             </div>
@@ -297,12 +329,15 @@
         <hr />
         <!--menumobile-->
         <div id="menumobile" class="mobile-panel mobilep-left">
-            <div class="close-menu"><a href="#menumobile" class="glyphicon glyphicon-remove-circle"></a></div>
+            <div class="close-menu">
+                <a href="#menumobile" class="glyphicon glyphicon-remove-circle"></a>
+            </div>
             <div class="menu-in">
                 <div class="menu-mobile">
-                    <div class="logo"><a href="~/" runat="server">
-                        <img src="assets/images/logosh.png" alt=""/></a></div>
-                    <ul class="menu-nav">  
+                    <div class="logo">
+                        <a href="~/" runat="server">
+                            <img src="assets/images/logosh.png" alt="" /></a></div>
+                    <ul class="menu-nav">
                         <li><a href="san-pham.aspx">Sản phẩm</a>
                             <asp:ListView ID="lstDanhMucSanPham1" runat="server" DataSourceID="odsDanhMucSanPham"
                                 EnableModelValidation="True">
@@ -317,13 +352,12 @@
                                 </LayoutTemplate>
                             </asp:ListView>
                         </li>
-                        <li>
-                            <a href="dieu-tri-ho.aspx">Điều trị ho</a>
-                            <asp:ListView ID="ListView1" runat="server" DataSourceID="ObjectDataSource1"
-                                EnableModelValidation="True">
+                        <li><a href="dieu-tri-ho.aspx">Điều trị ho</a>
+                            <asp:ListView ID="ListView1" runat="server" DataSourceID="ObjectDataSource1" EnableModelValidation="True">
                                 <ItemTemplate>
                                     <li><a href='<%# progressTitle(Eval("ArticleCategoryName")) + "-dti-" + Eval("ParentID") + "-dri-" + Eval("ArticleCategoryID") + ".aspx" %>'>
-                                     <span class="icon-chevron-right iconl"></span><%# Eval("ArticleCategoryName")%></a></li>
+                                        <span class="icon-chevron-right iconl"></span>
+                                        <%# Eval("ArticleCategoryName")%></a></li>
                                 </ItemTemplate>
                                 <LayoutTemplate>
                                     <ul>
@@ -341,13 +375,12 @@
                                 </SelectParameters>
                             </asp:ObjectDataSource>
                         </li>
-                        <li>
-                            <a href="kien-thuc-benh-hoc.aspx">Kiến thức bệnh học</a>
-                            <asp:ListView ID="ListView2" runat="server" DataSourceID="ObjectDataSource2"
-                                EnableModelValidation="True">
+                        <li><a href="kien-thuc-benh-hoc.aspx">Kiến thức bệnh học</a>
+                            <asp:ListView ID="ListView2" runat="server" DataSourceID="ObjectDataSource2" EnableModelValidation="True">
                                 <ItemTemplate>
                                     <li><a href='<%# progressTitle(Eval("ArticleCategoryName")) + "-kci-" + Eval("ParentID") + "-kri-" + Eval("ArticleCategoryID") + ".aspx" %>'>
-                                        <span class="icon-chevron-right iconl"></span><%# Eval("ArticleCategoryName")%></a></li>
+                                        <span class="icon-chevron-right iconl"></span>
+                                        <%# Eval("ArticleCategoryName")%></a></li>
                                 </ItemTemplate>
                                 <LayoutTemplate>
                                     <ul>
@@ -366,13 +399,13 @@
                             </asp:ObjectDataSource>
                         </li>
                         <li><a href="tu-van.aspx">Tư vấn bác sỹ</a></li>
-                        <li>
-                            <a href="tin-tuc.aspx">Tin tức</a>
+                        <li><a href="tin-tuc.aspx">Tin tức</a>
                             <asp:ListView ID="lstDanhMucTinTuc" runat="server" DataSourceID="odsDanhMucTinTuc"
                                 EnableModelValidation="True">
                                 <ItemTemplate>
                                     <li><a href='<%# progressTitle(Eval("ArticleCategoryName")) + "-tci-" + Eval("ParentID") + "-tri-" + Eval("ArticleCategoryID") + ".aspx" %>'>
-                                        <span class="icon-chevron-right iconl"></span><%# Eval("ArticleCategoryName")%></a></li>
+                                        <span class="icon-chevron-right iconl"></span>
+                                        <%# Eval("ArticleCategoryName")%></a></li>
                                 </ItemTemplate>
                                 <LayoutTemplate>
                                     <ul>
@@ -400,7 +433,7 @@
                     <div class="mo-box">
                         <div class="share">
                             Follow me on <a href="https://www.facebook.com/bacsibezut">
-                                <img src="assets/images/fa-1.png" alt="" /></a> 
+                                <img src="assets/images/fa-1.png" alt="" /></a>
                         </div>
                     </div>
                 </div>
@@ -422,7 +455,7 @@
     <script src="assets/js/isotope.pkgd.min.js" type="text/javascript"></script>
     <script src="assets/js/slick.min.js" type="text/javascript"></script>
     <script src="assets/js/superfish.js" type="text/javascript"></script>
-        <script src="assets/js/jquery.panel.mobile.js"></script>
+    <script src="assets/js/jquery.panel.mobile.js"></script>
     <script src="assets/js/jquery.main.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
