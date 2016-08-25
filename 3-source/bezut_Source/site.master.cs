@@ -48,7 +48,16 @@ public partial class site : System.Web.UI.MasterPage
     }
     protected void btnSearch_Click(object sender, EventArgs e)
     {
-        Response.Redirect("tim-kiem.aspx?kw=" + txtSearch.Text.Trim());
+        //Response.Redirect("tim-kiem.aspx?kw=" + txtSearch.Text.Trim());
+        if (txtSearch.Text != "")
+        {
+            Session["Keyword"] = txtSearch.Text;
+            Response.Redirect("tim-kiem.aspx?kw=" + txtSearch.Text);
+        }
+        else
+        {
+            Common.ShowAlert("Chưa nhập từ khóa!");
+        }
         //Response.Redirect("tim-kiem.aspx?dm=" + DropDownList1.SelectedValue + "&kw=" + searchTextBox.Text.Trim());
     }
 }

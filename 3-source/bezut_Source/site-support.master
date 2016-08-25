@@ -92,12 +92,12 @@
                 </div>
             </div>
         </div>
-        <%--<div class="col-md-12 col-xs-6">
+        <div class="col-md-12 col-xs-6">
             <div class="adv">
                 <a href="he-thong-phan-phoi.aspx">
                     <img src="assets/images/images-1.jpg" alt="" /></a>
             </div>
-        </div>--%>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-12 col-xs-6">

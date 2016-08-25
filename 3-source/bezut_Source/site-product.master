@@ -327,12 +327,12 @@
                 </SelectParameters>
             </asp:ObjectDataSource>
         </div>
-        <%--<div class="col-md-12 col-xs-6">
-    <div class="adv invisible">
-        <a href="he-thong-phan-phoi.aspx">
-            <img src="assets/images/images-1.jpg" alt="" /></a>
-    </div>
-        </div>--%>
+        <div class="col-md-12 col-xs-6">
+            <div class="adv invisible">
+                <a href="he-thong-phan-phoi.aspx">
+                    <img src="assets/images/images-1.jpg" alt="" /></a>
+            </div>
+        </div>
     </div>
     <asp:ContentPlaceHolder ID="cphAsideBottom" runat="server">
     </asp:ContentPlaceHolder>

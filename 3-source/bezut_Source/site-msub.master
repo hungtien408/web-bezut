@@ -16,10 +16,10 @@
     </asp:ContentPlaceHolder>
     <div class="row">
         <div class="col-md-12 col-xs-6">
-           <%-- <div class="adv">
+            <div class="adv">
                 <a href="he-thong-phan-phoi.aspx">
                     <img src="assets/images/images-1.jpg" alt="" /></a>
-            </div>--%>
+            </div>
             <div class="adv">
                 <a href="lich-tiem-chung.aspx">
                     <img src="assets/images/images-2.jpg" alt="" /></a>

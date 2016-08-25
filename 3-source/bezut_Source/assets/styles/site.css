@@ -3209,3 +3209,81 @@ hr
        .capchaans {
            margin-top: 5px;
        }
+form.gsc-search-box {
+    border: none;
+    padding-top: 5px;
+    display: block !important;
+}
+.gsc-search-box-tools .gsc-search-box .gsc-input {
+    padding-right: 5px !important;
+}
+.gsc-search-box-tools .gsc-search-box .gsc-input {
+    display: block;
+    height: 30px !important;
+}
+.gsc-search-box .gsst_b a, .gsc-results-close-btn {
+    display: none !important;
+}
+.gsc-control-cse .gsc-input-box {
+    height: auto;
+    overflow: hidden !important;
+}
+
+.gsib_a {
+    padding-top: 0 !important;
+}
+
+#gsc-i-id1 {
+    background: none !important;
+}
+.cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
+    background-color: #03aeeb !important;
+    border: none !important;
+    display: block;
+    padding: 5px !important;
+    margin: 0 !important;
+    height: 30px !important;
+    width: 33px !important;
+}
+#colContent .gsc-results-wrapper-overlay {
+    border: none !important;
+    position: relative !important;
+    left: 0;
+    top: 0;
+    margin-top: 15px;
+    padding: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    width: 100%;
+}
+.gsc-results .gsc-cursor-box {
+    text-align: center !important;
+    word-spacing: 20px;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+    font-size: 18px !important;
+    padding-right: 15px;
+}
+.gsc-modal-background-image-visible {
+    display: none !important;
+}
+.sidebar-sticky {
+    z-index: 999;
+}
+#stickba {
+    background-color: #fff;
+    width: 100%;
+}
+.gsc-overflow-hidden {
+    overflow: auto !important;
+}
+
+/*An bai viet*/
+.news-content .news-name, .news-content .description, .news-content .more-details,
+.section-content .section-name, .section-content .description, .box-news .section-content .section-name,
+.news-box .news-name, .product-content .product-name, .product-content .description, .section-box .section-name, .section-box .description {
+    display: none !important;
+}
