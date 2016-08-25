@@ -10,7 +10,7 @@
     <div class="wrap-asidebox">
         
     <asp:ListView ID="lstDieuTriHoNoiBat" runat="server" DataSourceID="odsDieuTriHoNoiBat"
-        EnableModelValidation="True">
+        EnableModelValidation="True" Visible="False">
         <ItemTemplate>
             <div class="news-box">
                 <h2 class="title-ab text-uppercase">

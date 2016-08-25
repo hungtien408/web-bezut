@@ -134,11 +134,11 @@
                                 </SelectParameters>
                             </asp:ObjectDataSource>
                         </li>
-                        <li><a href="dieu-tri-ho.aspx">Điều trị ho</a></li>
+                       <li><a href="dieu-tri-ho.aspx">Điều trị ho</a></li>
                         <li><a href="kien-thuc-benh-hoc.aspx">Sức khoẻ tổng hợp</a></li>
                         <li><a href="tu-van.aspx">Tư vấn chuyên gia</a></li>
                         <li><a href="tin-tuc.aspx">Tin tức</a></li>
-                        <%--<li><a href="he-thong-phan-phoi.aspx">Hệ thống phân phối</a></li>--%>
+                        <li><a href="he-thong-phan-phoi.aspx">Hệ thống phân phối</a></li>
                         <li class="last"><a href="lien-he.aspx">Liên hệ</a></li>
                     </ul>
                     <div class="header-bottom">

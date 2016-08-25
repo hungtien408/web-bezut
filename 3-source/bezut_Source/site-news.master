@@ -26,7 +26,7 @@
                     <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
                 </ul>--%>
             <asp:ListView ID="lstDieuTriHoNoiBat" runat="server" DataSourceID="odsDieuTriHoNoiBat"
-                EnableModelValidation="True">
+                EnableModelValidation="True" Visible="False">
                 <ItemTemplate>
                     <div class="news-box">
                         <h2 class="title-ab text-uppercase">
@@ -234,7 +234,7 @@
                 <li><a href="#">Phải làm sao để mùa lạnh không còn là “mùa ho” ở trẻ</a></li>
             </ul>--%>
             <asp:ListView ID="lstKienThucBenhHoc" runat="server" DataSourceID="odsKienThucBenhHoc"
-                EnableModelValidation="True">
+                EnableModelValidation="True" Visible="False">
                 <ItemTemplate>
                     <div class="news-box news-blue">
                         <h2 class="title-ab text-uppercase">
