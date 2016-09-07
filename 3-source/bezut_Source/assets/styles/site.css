@@ -2719,6 +2719,11 @@ hr
     float: left;
     width: 435px;
 }
+.wrap-product {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
 .details-img img
 {
     display: block;
@@ -2777,6 +2782,9 @@ hr
     font-weight: 600;
     padding-right: 5px;
 }
+.details-content.srh .list-nav li strong {
+    color: #e36c09;
+}
 .details-content .list-nav li span
 {
     background-color: #f3f3f3;
@@ -2809,7 +2817,7 @@ hr
     list-style: none;
     margin-bottom: 10px;
 }
-.detail-text .list-squate li
+.detail-text > .list-squate li
 {
     background: url(../images/icon-c1.png) no-repeat left 12px;
     padding: 3px 0 3px 20px;
@@ -3202,7 +3210,17 @@ hr
         color: #fff;
     }
     
-        .detail-text .details-img img {
+        /*.detail-text .details-img img {
+            display: block;
+            width: 100% !important;
+        }*/
+        .details-img {
+            float: left;
+            width: 50%;
+        }
+        .details-img img 
+        {
+            float: left;
             display: block;
             width: 100% !important;
         }
@@ -3282,8 +3300,10 @@ form.gsc-search-box {
 }
 
 /*An bai viet*/
+/*
 .news-content .news-name, .news-content .description, .news-content .more-details,
 .section-content .section-name, .section-content .description, .box-news .section-content .section-name,
 .news-box .news-name, .product-content .product-name, .product-content .description, .section-box .section-name, .section-box .description {
     display: none !important;
 }
+*/
