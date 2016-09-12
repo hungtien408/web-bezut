@@ -66,6 +66,18 @@
             $('.menu-nav li a[href$="' + page + '"]').parents("li").addClass("active");
         }
     </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-84023431-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -134,7 +146,7 @@
                                 </SelectParameters>
                             </asp:ObjectDataSource>
                         </li>
-                       <li><a href="dieu-tri-ho.aspx">Điều trị ho</a></li>
+                        <li><a href="dieu-tri-ho.aspx">Điều trị ho</a></li>
                         <li><a href="kien-thuc-benh-hoc.aspx">Sức khoẻ tổng hợp</a></li>
                         <li><a href="tu-van.aspx">Tư vấn chuyên gia</a></li>
                         <li><a href="tin-tuc.aspx">Tin tức</a></li>
@@ -195,8 +207,8 @@
                         <div class="footer-logo">
                             <a href="http://www.vinacare.vn/" runat="server">
                                 <img src="assets/images/logo-footer.png" alt="" /></a></div>
-                        <div class="dangky">
-                            <img src="assets/images/dangky.png" alt="" /></div>
+                        <%--<div class="dangky">
+                            <img src="assets/images/dangky.png" alt="" /></div>--%>
                     </div>
                     <div class="footer-right">
                         <div class="row">
@@ -297,8 +309,8 @@
                                     <li class="add-2"><span>Điện thoại: (04) 3664 9263</span></li>
                                     <li class="add-3"><span>Fax: (04) 3664 9265</span></li>
                                     <li class="add-5"><span>Email: <a href="mailto:vinacarepharma@gmail.com">vinacarepharma@gmail.com</a></span></li>
-                                    <li>Mã số doanh nghiệp 0102302539 cấp lần đầu ngày 26 tháng 06 năm 2007 và cấp lần thứ 7 ngày 07 tháng 07 năm 2015 tại Sở Kế hoạch
-                                        và đầu tư Thành phố Hà Nội.</li>
+                                    <li>Mã số doanh nghiệp 0102302539 cấp lần đầu ngày 26 tháng 06 năm 2007 và cấp lần thứ
+                                        7 ngày 07 tháng 07 năm 2015 tại Sở Kế hoạch và đầu tư Thành phố Hà Nội.</li>
                                 </ul>
                             </div>
                         </div>
@@ -307,8 +319,8 @@
                         <div class="footer-logo">
                             <a id="A1" href="http://www.vinacare.vn/" runat="server">
                                 <img src="assets/images/logo-footer.png" alt="" /></a></div>
-                        <div class="dangky">
-                            <img src="assets/images/dangky.png" alt="" /></div>
+                        <%--<div class="dangky">
+                            <img src="assets/images/dangky.png" alt="" /></div>--%>
                     </div>
                 </div>
             </div>
@@ -462,14 +474,14 @@
     <script type="text/javascript">
         $(document).ready(function () {
             //an link
-//            $('.news-big a').attr('href', 'javascript:void(0)');
-//            $('.news-lbox a').attr('href', 'javascript:void(0)');
-//            $('.head-list a').attr('href', 'javascript:void(0)');
-//            $('.news-name a').attr('href', 'javascript:void(0)');
-//            $('.box-news a').attr('href', 'javascript:void(0)');
-//            $('.product-box a').attr('href', 'javascript:void(0)');
-//            $('.section-box a').attr('href', 'javascript:void(0)');
-//            $('.section-list a').attr('href', 'javascript:void(0)');
+            //            $('.news-big a').attr('href', 'javascript:void(0)');
+            //            $('.news-lbox a').attr('href', 'javascript:void(0)');
+            //            $('.head-list a').attr('href', 'javascript:void(0)');
+            //            $('.news-name a').attr('href', 'javascript:void(0)');
+            //            $('.box-news a').attr('href', 'javascript:void(0)');
+            //            $('.product-box a').attr('href', 'javascript:void(0)');
+            //            $('.section-box a').attr('href', 'javascript:void(0)');
+            //            $('.section-list a').attr('href', 'javascript:void(0)');
         });
     </script>
     <div id="fb-root">
