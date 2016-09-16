@@ -302,8 +302,9 @@
                                 </asp:ObjectDataSource>
                             </div>
                             <div class="col-md-4 col-sm-12 col-xs-12">
-                                <h2>
-                                    liên hệ</h2>
+                                <h2>Công ty Cổ phần Dược phẩm Vinacare</h2>
+                                <%--<h2>
+                                    liên hệ</h2>--%>
                                 <ul class="address-box list-footer">
                                     <li class="add-1"><span>Địa chỉ: Số 18 ngách 19/15 Kim Đồng - Hà Nội</span></li>
                                     <li class="add-2"><span>Điện thoại: (04) 3664 9263</span></li>

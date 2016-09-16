@@ -250,9 +250,11 @@
                                 </asp:ObjectDataSource>
                             </div>
                             <div class="col-md-4 col-sm-12 col-xs-12">
-                                <h2>
-                                    contact us</h2>
+                                <%--<h2>
+                                    contact us</h2>--%>
+                                    <h2>Công ty Cổ phần Dược phẩm Vinacare</h2>
                                 <ul class="address-box list-footer">
+                                    <li>Công ty Cổ phần Dược phẩm Vinacare</li>
                                     <li class="add-1"><span>Address: Số 18 ngách 19/15 Kim Đồng - Hà Nội</span></li>
                                     <li class="add-2"><span>Phone: (04) 3664 9263</span></li>
                                     <li class="add-3"><span>Fax: (04) 3664 9265</span></li>
