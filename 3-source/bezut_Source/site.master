@@ -207,8 +207,8 @@
                         <div class="footer-logo">
                             <a href="http://www.vinacare.vn/" runat="server">
                                 <img src="assets/images/logo-footer.png" alt="" /></a></div>
-                        <%--<div class="dangky">
-                            <img src="assets/images/dangky.png" alt="" /></div>--%>
+                        <div class="dangky">
+                            <a href="http://online.gov.vn/CustomWebsiteDisplay.aspx?DocId=27183" target="_blank"><img src="assets/images/dangky.png" alt="" /></a></div>
                     </div>
                     <div class="footer-right">
                         <div class="row">
@@ -320,8 +320,8 @@
                         <div class="footer-logo">
                             <a id="A1" href="http://www.vinacare.vn/" runat="server">
                                 <img src="assets/images/logo-footer.png" alt="" /></a></div>
-                        <%--<div class="dangky">
-                            <img src="assets/images/dangky.png" alt="" /></div>--%>
+                        <div class="dangky">
+                            <a href="http://online.gov.vn/CustomWebsiteDisplay.aspx?DocId=27183" target="_blank"><img src="assets/images/dangky.png" alt="" /></a></div>
                     </div>
                 </div>
             </div>
