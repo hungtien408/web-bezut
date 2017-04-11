@@ -22,8 +22,8 @@
                 </div>--%>
                 <asp:ListView ID="lstBanner" runat="server" DataSourceID="odsBanner" EnableModelValidation="True">
                     <ItemTemplate>
-                        <img id="Img3" alt='<%# Eval("FileName") %>' src='<%# !string.IsNullOrEmpty(Eval("FileName").ToString()) ? "~/res/advertisement/" + Eval("FileName") : "~/assets/images/banner-img-1.jpg" %>'
-                            runat="server" />
+                        <a href='<%# Eval("Website") %>' target="_blank"><img id="Img3" alt='<%# Eval("FileName") %>' src='<%# !string.IsNullOrEmpty(Eval("FileName").ToString()) ? "~/res/advertisement/" + Eval("FileName") : "~/assets/images/banner-img-1.jpg" %>'
+                            runat="server" /></a>
                     </ItemTemplate>
                     <LayoutTemplate>
                         <div id="slider" class="nivoSlider">
